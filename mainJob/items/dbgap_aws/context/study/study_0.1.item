@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_lZ3GwE8aEem0DtxHb_cOcg" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_n6MVgE8aEem0DtxHb_cOcg" comment="" name="studyName" prompt="studyName?" promptNeeded="false" type="id_String" value="MESA"/>
+    <contextParameter xmi:id="_FgjP4FCbEemAhsxr4PWn-w" comment="" name="fileNameSubject" prompt="fileNameSubject?" promptNeeded="false" type="id_String" value="phs000209.v13.pht001108.v4.p3.MESA_Subject.MULTI.txt"/>
+    <contextParameter xmi:id="_DUc50FCdEemAhsxr4PWn-w" comment="" name="consentVarName" prompt="consentVarName?" promptNeeded="false" type="id_String" value="CONSENT"/>
+    <contextParameter xmi:id="_zBrk8FFXEemrpuL4gWi3eg" comment="" name="subjectTableId" prompt="subjectTableId?" promptNeeded="false" type="id_String" value="pht001108.v4"/>
+    <contextParameter xmi:id="_AChBMFFcEemrpuL4gWi3eg" comment="" name="studyId" prompt="studyId?" promptNeeded="false" type="id_String" value="phs000209.v13"/>
+    <contextParameter xmi:id="_mT1ZgFF8EemWEfnhHSftpA" comment="" name="AgeInYearVardIdentifier" prompt="AgeInYearVardIdentifier?" promptNeeded="false" type="id_String" value="phs000209.v13.pht001116.v10.p3.phv00084442.v3"/>
+    <contextParameter xmi:id="_mT1ZgVF8EemWEfnhHSftpA" comment="" name="GenderVardIdentifier" prompt="GenderVardIdentifier?" promptNeeded="false" type="id_String" value="phs000209.v13.pht001116.v10.p3.phv00084446.v2"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_JuFfsFYfEemD6qIJkabH6A" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_JuFfsVYfEemD6qIJkabH6A" comment="" name="studyName" prompt="studyName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_JuFfslYfEemD6qIJkabH6A" comment="" name="fileNameSubject" prompt="fileNameSubject?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_JuFfs1YfEemD6qIJkabH6A" comment="" name="consentVarName" prompt="consentVarName?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_JuFftFYfEemD6qIJkabH6A" comment="" name="subjectTableId" prompt="subjectTableId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_JuFftVYfEemD6qIJkabH6A" comment="" name="studyId" prompt="studyId?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_JuFftlYfEemD6qIJkabH6A" comment="" name="AgeInYearVardIdentifier" prompt="AgeInYearVardIdentifier?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_JuFft1YfEemD6qIJkabH6A" comment="" name="GenderVardIdentifier" prompt="GenderVardIdentifier?" promptNeeded="false" type="id_String" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

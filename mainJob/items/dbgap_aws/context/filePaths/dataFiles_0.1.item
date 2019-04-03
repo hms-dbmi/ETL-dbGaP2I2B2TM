@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_eWHiwE8QEem0DtxHb_cOcg" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_eWHiwU8QEem0DtxHb_cOcg" comment="Dictionary sub directory" name="dictSourcePath" prompt="dictSourcePath?" promptNeeded="false" type="id_String" value="/home/vianney/tempMesa/START_DICT/"/>
+    <contextParameter xmi:id="_dnNScE_NEemVcsGf7QnI9w" comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" type="id_String" value="/home/vianney/tempMesa/TESTCase/"/>
+    <contextParameter xmi:id="_79YfUE_QEemVcsGf7QnI9w" comment="final data sub directory (sub directory of tempRootPath)" name="dataOutputPath" prompt="dataOutputPath?" promptNeeded="false" type="id_String" value="/home/vianney/tempMesa/TESTCase/STRUCT_DATA/"/>
+    <contextParameter xmi:id="_NLX94FTKEem2xcggve_DcA" comment="" name="dictOutputPath" prompt="dictOutputPath?" promptNeeded="false" type="id_String" value="/home/vianney/tempMesa/STRUCT_DICT/"/>
+    <contextParameter xmi:id="_fv2K4FYYEemD6qIJkabH6A" comment="" name="configFilePath" prompt="configFilePath?" promptNeeded="false" type="id_String" value="/home/vianney/tempMesa/config/etlConfig.conf"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_B7zPIFYfEemD6qIJkabH6A" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_B7zPIVYfEemD6qIJkabH6A" comment="Dictionary sub directory" name="dictSourcePath" prompt="dictSourcePath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_B7zPIlYfEemD6qIJkabH6A" comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_B7zPI1YfEemD6qIJkabH6A" comment="final data sub directory (sub directory of tempRootPath)" name="dataOutputPath" prompt="dataOutputPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_B7zPJFYfEemD6qIJkabH6A" comment="" name="dictOutputPath" prompt="dictOutputPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_B7zPJVYfEemD6qIJkabH6A" comment="" name="configFilePath" prompt="configFilePath?" promptNeeded="false" type="id_String" value="./config/etlConfig.conf"/>
+  </talendfile:ContextType>
+</xmi:XMI>

@@ -1,0 +1,3 @@
+%~d0
+cd %~dp0
+java -Dtalend.component.manager.m2.repository=%cd%/../lib -Xms256M -Xmx1024M -cp .;../lib/routines.jar;../lib/advancedPersistentLookupLib-1.2.jar;../lib/commons-collections-3.2.2.jar;../lib/dom4j-1.6.1.jar;../lib/jakarta-oro-2.0.8.jar;../lib/jaxen-1.1.1.jar;../lib/jboss-serialization.jar;../lib/log4j-1.2.17.jar;../lib/postgresql-42.2.5.jar;../lib/talend_file_enhanced_20070724.jar;../lib/talendcsv.jar;../lib/trove.jar;../lib/xpathutil-1.0.0.jar;mainjob_0_1.jar;mapper_filemanager_0_2.jar;mapper_filebuilder_0_2.jar;dbgapdictionnaryparser_0_1.jar; dbgap_aws.mainjob_0_1.mainJob  --context=PROD %*
