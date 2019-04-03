@@ -29,7 +29,7 @@ public class writeConfigFile4EntityGenerator {
 		String fileName = configPath+configFileName;
 		
 		createDirIfNotExists(configPath);
-		createDirIfNotExists(dataPath+"/conpleted/");
+		createDirIfNotExists(dataPath+"COMPLETED/");
 		
 		writeLineToFile(fileName,"# URI to File or Directory that contains data to be loaded", false);
 		writeLineToFile(fileName,"filename="+dataPath,true);
@@ -38,7 +38,7 @@ public class writeConfigFile4EntityGenerator {
 		writeLineToFile(fileName,"# URI to Patient Mapping file",true);
 		writeLineToFile(fileName,"patientmappingfile="+dataPath+"MAPPING/mapping.csv.patient",true);
 		writeLineToFile(fileName,"# Location Table Entity files will be written to.",true);
-		writeLineToFile(fileName,"writedestination="+dataPath+"/conpleted/",true);
+		writeLineToFile(fileName,"writedestination="+dataPath+"COMPLETED/",true);
 		writeLineToFile(fileName,"# Flag to skip mapping headers",true);
 		writeLineToFile(fileName,"skipmapperheader=N",true);
 		writeLineToFile(fileName,"# Flag to skip data headers",true);
