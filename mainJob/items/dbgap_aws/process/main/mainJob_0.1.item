@@ -21,7 +21,7 @@
     <contextParameter comment="" name="subjectTableId" prompt="subjectTableId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="pht001108.v4"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
-    <contextParameter comment="" name="configFilePath" prompt="configFilePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="../config/etlConfig.conf"/>
+    <contextParameter comment="" name="configFilePath" prompt="configFilePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="/etl-workdir/config/etlConfig.conf"/>
     <contextParameter comment="final data sub directory (sub directory of tempRootPath)" name="dataOutputPath" prompt="dataOutputPath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
     <contextParameter comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
     <contextParameter comment="" name="dictOutputPath" prompt="dictOutputPath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
