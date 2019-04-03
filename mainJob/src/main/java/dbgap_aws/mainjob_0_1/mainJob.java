@@ -21,6 +21,7 @@ import routines.Numeric;
 import routines.DataOperation;
 import routines.TalendDataGenerator;
 import routines.TalendStringUtil;
+import routines.writeConfigFile4EntityGenerator;
 import routines.TalendString;
 import routines.StringHandling;
 import routines.Relational;
@@ -47,6 +48,9 @@ import java.util.Comparator;
 
 
 	//the import part of tJavaRow_1
+	//import java.util.List;
+
+	//the import part of tJava_1
 	//import java.util.List;
 
 
@@ -232,6 +236,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(configEntityPath != null){
+				
+					this.setProperty("configEntityPath", configEntityPath.toString());
+				
+			}
+			
 		}
 
 public String configFilePath;
@@ -305,6 +315,10 @@ public java.lang.String getDbPassword(){
 public String dbSchema;
 public String getDbSchema(){
 	return this.dbSchema;
+}
+public String configEntityPath;
+public String getConfigEntityPath(){
+	return this.configEntityPath;
 }
 	}
 	protected ContextProperties context = new ContextProperties(); // will be instanciated by MS.
@@ -481,6 +495,15 @@ private class TalendException extends Exception {
 					tRunJob_1_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tJava_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tJava_1_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tFileInputFullRow_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
@@ -492,6 +515,11 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tRunJob_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tJava_1_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -835,6 +863,10 @@ if( line.startsWith("subjectTableId")){
 	context.subjectTableId = line.split("=")[1];
 	System.out.println("subjectTableId ==> " + context.subjectTableId);
 }
+if( line.startsWith("configEntityPath")){
+	context.configEntityPath = line.split("=")[1];
+	System.out.println("configEntityPath ==> " + context.configEntityPath);
+}
 
     nb_line_tJavaRow_1++;   
 
@@ -1000,6 +1032,16 @@ end_Hash.put("tJavaRow_1", System.currentTimeMillis());
 								} 
 							
 							tRunJob_1Process(globalMap); 
+						
+				    			if(resumeEntryMethodName == null || globalResumeTicket){
+				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tFileInputFullRow_1:OnSubjobOk3", "", Thread.currentThread().getId() + "", "", "", "", "", "");
+								}	    				    			
+					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("OnSubjobOk4", 0, "ok");
+								} 
+							
+							tJava_1Process(globalMap); 
 						
 
 
@@ -1662,6 +1704,198 @@ end_Hash.put("tRunJob_1", System.currentTimeMillis());
 		globalMap.put("tRunJob_1_SUBPROCESS_STATE", 1);
 	}
 	
+
+public void tJava_1Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_1_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tJava_1 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tJava_1", false);
+		start_Hash.put("tJava_1", System.currentTimeMillis());
+		
+	
+	currentComponent="tJava_1";
+
+	
+		int tos_count_tJava_1 = 0;
+		
+
+
+writeConfigFile4EntityGenerator.writeConfig(context.configEntityPath, context.studyName+".conf", context.dataOutputPath, context.studyName);
+ 
+
+
+
+/**
+ * [tJava_1 begin ] stop
+ */
+	
+	/**
+	 * [tJava_1 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+
+	tos_count_tJava_1++;
+
+/**
+ * [tJava_1 main ] stop
+ */
+	
+	/**
+	 * [tJava_1 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_1 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tJava_1 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_1 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_1 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+ok_Hash.put("tJava_1", true);
+end_Hash.put("tJava_1", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tJava_1 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tJava_1 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_1";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_1 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tJava_1_SUBPROCESS_STATE", 1);
+	}
+	
     public String resuming_logs_dir_path = null;
     public String resuming_checkpoint_path = null;
     public String parent_part_launcher = null;
@@ -1847,6 +2081,8 @@ end_Hash.put("tRunJob_1", System.currentTimeMillis());
                             }
                         context.setContextType("dbSchema", "id_String");
                             context.dbSchema=(String) context.getProperty("dbSchema");
+                        context.setContextType("configEntityPath", "id_String");
+                            context.configEntityPath=(String) context.getProperty("configEntityPath");
                 } 
                 public void processAllContext() {
                         processContext_0();
@@ -1896,6 +2132,8 @@ end_Hash.put("tRunJob_1", System.currentTimeMillis());
                 context.dbPassword = (java.lang.String) parentContextMap.get("dbPassword");
             }if (parentContextMap.containsKey("dbSchema")) {
                 context.dbSchema = (String) parentContextMap.get("dbSchema");
+            }if (parentContextMap.containsKey("configEntityPath")) {
+                context.configEntityPath = (String) parentContextMap.get("configEntityPath");
             }
         }
 
@@ -2123,6 +2361,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     56750 characters generated by Talend Open Studio for Data Integration 
- *     on the 3 avril 2019 11:40:44 EDT
+ *     61051 characters generated by Talend Open Studio for Data Integration 
+ *     on the 3 avril 2019 16:27:47 EDT
  ************************************************************************************************/
