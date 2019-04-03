@@ -12,6 +12,6 @@
     <contextParameter xmi:id="_B7zPIlYfEemD6qIJkabH6A" comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter xmi:id="_B7zPI1YfEemD6qIJkabH6A" comment="final data sub directory (sub directory of tempRootPath)" name="dataOutputPath" prompt="dataOutputPath?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter xmi:id="_B7zPJFYfEemD6qIJkabH6A" comment="" name="dictOutputPath" prompt="dictOutputPath?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter xmi:id="_B7zPJVYfEemD6qIJkabH6A" comment="" name="configFilePath" prompt="configFilePath?" promptNeeded="false" type="id_String" value="./config/etlConfig.conf"/>
+    <contextParameter xmi:id="_B7zPJVYfEemD6qIJkabH6A" comment="" name="configFilePath" prompt="configFilePath?" promptNeeded="false" type="id_String" value="../config/etlConfig.conf"/>
   </talendfile:ContextType>
 </xmi:XMI>

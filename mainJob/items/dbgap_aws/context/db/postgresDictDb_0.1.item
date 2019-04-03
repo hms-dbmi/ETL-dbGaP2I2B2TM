@@ -9,7 +9,7 @@
     <contextParameter xmi:id="_eaqusFJJEemyHPi3XWkSJg" comment="" name="dbSchema" prompt="dbSchema?" promptNeeded="false" type="id_String" value="public"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_9IFogFYeEemD6qIJkabH6A" confirmationNeeded="false" name="PROD">
-    <contextParameter xmi:id="_9IFogVYeEemD6qIJkabH6A" comment="" name="dbHost" prompt="dbHost?" promptNeeded="false" type="id_String" value="localhost"/>
+    <contextParameter xmi:id="_9IFogVYeEemD6qIJkabH6A" comment="" name="dbHost" prompt="dbHost?" promptNeeded="false" type="id_String" value="db-dict"/>
     <contextParameter xmi:id="_9IFoglYeEemD6qIJkabH6A" comment="" name="dbName" prompt="dbName?" promptNeeded="false" type="id_String" value="dict_dbGap"/>
     <contextParameter xmi:id="_9IFog1YeEemD6qIJkabH6A" comment="" name="dbPort" prompt="dbPort?" promptNeeded="false" type="id_String" value="5432"/>
     <contextParameter xmi:id="_9IFohFYeEemD6qIJkabH6A" comment="" name="dbUser" prompt="dbUser?" promptNeeded="false" type="id_String" value="dict_dbGap"/>
