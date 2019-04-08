@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="PROD" jobType="Standard">
+<talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
     <contextParameter comment="" name="configFilePath" prompt="configFilePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="/home/vianney/tempMesa/config/etlConfig.conf"/>
     <contextParameter comment="final data sub directory (sub directory of tempRootPath)" name="dataOutputPath" prompt="dataOutputPath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="/home/vianney/tempMesa/TESTCase/STRUCT_DATA/"/>
@@ -20,7 +20,7 @@
     <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="MESA"/>
     <contextParameter comment="" name="subjectTableId" prompt="subjectTableId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="pht001108.v4"/>
     <contextParameter comment="" name="number_to_keep" prompt="number_to_keep?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Integer" value="100"/>
-    <contextParameter comment="" name="subset" prompt="subset?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="subset" prompt="subset?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Boolean" value="true"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="configFilePath" prompt="configFilePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="/etl-workdir/config/etlConfig.conf"/>

@@ -20,7 +20,7 @@
     <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="MESA"/>
     <contextParameter comment="" name="subjectTableId" prompt="subjectTableId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="pht001108.v4"/>
     <contextParameter comment="" name="number_to_keep" prompt="number_to_keep?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Integer" value="100"/>
-    <contextParameter comment="" name="subset" prompt="subset?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="subset" prompt="subset?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Boolean" value="true"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="dbHost" prompt="dbHost?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="db-dict"/>

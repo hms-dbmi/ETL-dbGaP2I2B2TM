@@ -8,7 +8,7 @@
     <contextParameter comment="" name="subjectFile" prompt="subjectFile?" promptNeeded="false" type="id_Boolean" value=""/>
     <contextParameter comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="/home/vianney/tempMesa/TESTCase/"/>
     <contextParameter comment="" name="number_to_keep" prompt="number_to_keep?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Integer" value="100"/>
-    <contextParameter comment="" name="subset" prompt="subset?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="subset" prompt="subset?" promptNeeded="false" repositoryContextId="_r79a8FoUEemMv5kd7-5DiA" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="currentFileName" prompt="currentFileName?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="sourceFilePath" prompt="sourceFilePath?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="study" prompt="study?" promptNeeded="false" type="id_String" value=""/>
