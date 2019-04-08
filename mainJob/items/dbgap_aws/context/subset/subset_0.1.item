@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd">
+  <talendfile:ContextType xmi:id="_r8XDkFoUEemMv5kd7-5DiA" confirmationNeeded="false" name="Default">
+    <contextParameter xmi:id="_r8XDkVoUEemMv5kd7-5DiA" comment="" name="subset" prompt="subset?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter xmi:id="_r8XDkloUEemMv5kd7-5DiA" comment="" name="number_to_keep" prompt="number_to_keep?" promptNeeded="false" type="id_Integer" value="100"/>
+  </talendfile:ContextType>
+  <talendfile:ContextType xmi:id="_yxUwQFoUEemMv5kd7-5DiA" confirmationNeeded="false" name="PROD">
+    <contextParameter xmi:id="_yxUwQVoUEemMv5kd7-5DiA" comment="" name="subset" prompt="subset?" promptNeeded="false" type="id_Boolean" value=""/>
+    <contextParameter xmi:id="_yxUwQloUEemMv5kd7-5DiA" comment="" name="number_to_keep" prompt="number_to_keep?" promptNeeded="false" type="id_Integer" value=""/>
+  </talendfile:ContextType>
+</xmi:XMI>

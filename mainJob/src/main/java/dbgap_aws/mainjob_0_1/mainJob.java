@@ -50,6 +50,9 @@ import java.util.Comparator;
 	//the import part of tJavaRow_1
 	//import java.util.List;
 
+	//the import part of tJava_2
+	//import java.util.List;
+
 	//the import part of tJava_1
 	//import java.util.List;
 
@@ -158,6 +161,42 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(dbHost != null){
+				
+					this.setProperty("dbHost", dbHost.toString());
+				
+			}
+			
+			if(dbName != null){
+				
+					this.setProperty("dbName", dbName.toString());
+				
+			}
+			
+			if(dbPassword != null){
+				
+					this.setProperty("dbPassword", dbPassword.toString());
+				
+			}
+			
+			if(dbPort != null){
+				
+					this.setProperty("dbPort", dbPort.toString());
+				
+			}
+			
+			if(dbSchema != null){
+				
+					this.setProperty("dbSchema", dbSchema.toString());
+				
+			}
+			
+			if(dbUser != null){
+				
+					this.setProperty("dbUser", dbUser.toString());
+				
+			}
+			
 			if(AgeInYearVardIdentifier != null){
 				
 					this.setProperty("AgeInYearVardIdentifier", AgeInYearVardIdentifier.toString());
@@ -200,39 +239,15 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(dbHost != null){
+			if(number_to_keep != null){
 				
-					this.setProperty("dbHost", dbHost.toString());
-				
-			}
-			
-			if(dbName != null){
-				
-					this.setProperty("dbName", dbName.toString());
+					this.setProperty("number_to_keep", number_to_keep.toString());
 				
 			}
 			
-			if(dbPort != null){
+			if(subset != null){
 				
-					this.setProperty("dbPort", dbPort.toString());
-				
-			}
-			
-			if(dbUser != null){
-				
-					this.setProperty("dbUser", dbUser.toString());
-				
-			}
-			
-			if(dbPassword != null){
-				
-					this.setProperty("dbPassword", dbPassword.toString());
-				
-			}
-			
-			if(dbSchema != null){
-				
-					this.setProperty("dbSchema", dbSchema.toString());
+					this.setProperty("subset", subset.toString());
 				
 			}
 			
@@ -257,6 +272,30 @@ public String getDictOutputPath(){
 public String dictSourcePath;
 public String getDictSourcePath(){
 	return this.dictSourcePath;
+}
+public String dbHost;
+public String getDbHost(){
+	return this.dbHost;
+}
+public String dbName;
+public String getDbName(){
+	return this.dbName;
+}
+public java.lang.String dbPassword;
+public java.lang.String getDbPassword(){
+	return this.dbPassword;
+}
+public String dbPort;
+public String getDbPort(){
+	return this.dbPort;
+}
+public String dbSchema;
+public String getDbSchema(){
+	return this.dbSchema;
+}
+public String dbUser;
+public String getDbUser(){
+	return this.dbUser;
 }
 public String AgeInYearVardIdentifier;
 public String getAgeInYearVardIdentifier(){
@@ -286,29 +325,13 @@ public String subjectTableId;
 public String getSubjectTableId(){
 	return this.subjectTableId;
 }
-public String dbHost;
-public String getDbHost(){
-	return this.dbHost;
+public Integer number_to_keep;
+public Integer getNumber_to_keep(){
+	return this.number_to_keep;
 }
-public String dbName;
-public String getDbName(){
-	return this.dbName;
-}
-public String dbPort;
-public String getDbPort(){
-	return this.dbPort;
-}
-public String dbUser;
-public String getDbUser(){
-	return this.dbUser;
-}
-public java.lang.String dbPassword;
-public java.lang.String getDbPassword(){
-	return this.dbPassword;
-}
-public String dbSchema;
-public String getDbSchema(){
-	return this.dbSchema;
+public Boolean subset;
+public Boolean getSubset(){
+	return this.subset;
 }
 	}
 	protected ContextProperties context = new ContextProperties(); // will be instanciated by MS.
@@ -476,6 +499,24 @@ private class TalendException extends Exception {
 					tRunJob_2_onSubJobError(exception, errorComponent, globalMap);
 			}
 			
+			public void tRunJob_3_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tRunJob_3_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
+			public void tJava_2_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+				
+				end_Hash.put(errorComponent, System.currentTimeMillis());
+				
+				status = "failure";
+				
+					tJava_2_onSubJobError(exception, errorComponent, globalMap);
+			}
+			
 			public void tRunJob_1_error(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 				
 				end_Hash.put(errorComponent, System.currentTimeMillis());
@@ -500,6 +541,16 @@ resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThrea
 
 			}
 			public void tRunJob_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tRunJob_3_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
+
+resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
+
+			}
+			public void tJava_2_onSubJobError(Exception exception, String errorComponent, final java.util.Map<String, Object> globalMap) throws TalendException {
 
 resumeUtil.addLog("SYSTEM_LOG", "NODE:"+ errorComponent, "", Thread.currentThread().getId()+ "", "FATAL", "", exception.getMessage(), ResumeUtil.getExceptionStackTrace(exception),"");
 
@@ -854,6 +905,16 @@ if( line.startsWith("subjectTableId")){
 	System.out.println("subjectTableId ==> " + context.subjectTableId);
 }
 
+if( line.startsWith("subset")){
+	context.subset = Boolean.parseBoolean(line.split("=")[1]);
+	System.out.println("subset ==> " + context.subset);
+}
+
+if( line.startsWith("number_to_keep")){
+	context.number_to_keep = Integer.parseInt(line.split("=")[1]);
+	System.out.println("number_to_keep ==> " + context.number_to_keep);
+}
+
     nb_line_tJavaRow_1++;   
 
  
@@ -1127,6 +1188,7 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 
 
 
+		
 
 
 	
@@ -1324,6 +1386,21 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 ok_Hash.put("tRunJob_2", true);
 end_Hash.put("tRunJob_2", System.currentTimeMillis());
 
+   			if (context.subset) {
+   				
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If1", 0, "true");
+					}
+				
+    			tRunJob_3Process(globalMap);
+   			}
+
+			   
+   				else{
+					if(execStat){   
+   	 					runStat.updateStatOnConnection("If1", 0, "false");
+					}   	 
+   				}
 
 
 
@@ -1381,6 +1458,477 @@ end_Hash.put("tRunJob_2", System.currentTimeMillis());
 		
 
 		globalMap.put("tRunJob_2_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tRunJob_3_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+		
+
+
+	
+	/**
+	 * [tRunJob_3 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tRunJob_3", false);
+		start_Hash.put("tRunJob_3", System.currentTimeMillis());
+		
+	
+	currentComponent="tRunJob_3";
+
+	
+		int tos_count_tRunJob_3 = 0;
+		
+
+
+ 
+
+
+
+/**
+ * [tRunJob_3 begin ] stop
+ */
+	
+	/**
+	 * [tRunJob_3 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_3";
+
+	
+	java.util.List<String> paraList_tRunJob_3 = new java.util.ArrayList<String>();
+	
+	        			paraList_tRunJob_3.add("--father_pid="+pid);
+	      			
+	        			paraList_tRunJob_3.add("--root_pid="+rootPid);
+	      			
+	        			paraList_tRunJob_3.add("--father_node=tRunJob_3");
+	      			
+	        			paraList_tRunJob_3.add("--context=PROD");
+	      			
+	//for feature:10589
+	
+		paraList_tRunJob_3.add("--stat_port=" + portStats);
+	
+
+	if(resuming_logs_dir_path != null){
+		paraList_tRunJob_3.add("--resuming_logs_dir_path=" + resuming_logs_dir_path);
+	}
+	String childResumePath_tRunJob_3 = ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path);
+	String tRunJobName_tRunJob_3 = ResumeUtil.getRighttRunJob(resuming_checkpoint_path);
+	if("tRunJob_3".equals(tRunJobName_tRunJob_3) && childResumePath_tRunJob_3 != null){
+		paraList_tRunJob_3.add("--resuming_checkpoint_path=" + ResumeUtil.getChildJobCheckPointPath(resuming_checkpoint_path));
+	}
+	paraList_tRunJob_3.add("--parent_part_launcher=JOB:" + jobName + "/NODE:tRunJob_3");
+	
+	java.util.Map<String, Object> parentContextMap_tRunJob_3 = new java.util.HashMap<String, Object>();
+
+	
+
+	Object obj_tRunJob_3 = null;
+
+	
+	
+		dbgap_aws.subset_filemanager_0_1.Subset_FileManager childJob_tRunJob_3 = new dbgap_aws.subset_filemanager_0_1.Subset_FileManager();
+	    // pass DataSources
+	    java.util.Map<String, routines.system.TalendDataSource> talendDataSources_tRunJob_3 = (java.util.Map<String, routines.system.TalendDataSource>) globalMap
+	            .get(KEY_DB_DATASOURCES);
+	    if (null != talendDataSources_tRunJob_3) {
+	        java.util.Map<String, javax.sql.DataSource> dataSources_tRunJob_3 = new java.util.HashMap<String, javax.sql.DataSource>();
+	        for (java.util.Map.Entry<String, routines.system.TalendDataSource> talendDataSourceEntry_tRunJob_3 : talendDataSources_tRunJob_3
+			        .entrySet()) {
+	            dataSources_tRunJob_3.put(talendDataSourceEntry_tRunJob_3.getKey(),
+	                    talendDataSourceEntry_tRunJob_3.getValue().getRawDataSource());
+	        }
+	        childJob_tRunJob_3.setDataSources(dataSources_tRunJob_3);
+	    }
+		  
+			childJob_tRunJob_3.parentContextMap = parentContextMap_tRunJob_3;
+		  
+		
+		String[][] childReturn_tRunJob_3 = childJob_tRunJob_3.runJob((String[]) paraList_tRunJob_3.toArray(new String[paraList_tRunJob_3.size()]));
+		
+	  	
+				errorCode = childJob_tRunJob_3.getErrorCode();
+		    
+	            
+	    	if(childJob_tRunJob_3.getErrorCode() == null){
+				globalMap.put("tRunJob_3_CHILD_RETURN_CODE", childJob_tRunJob_3.getStatus() != null && ("failure").equals(childJob_tRunJob_3.getStatus()) ? 1 : 0);
+	    	}else{
+				globalMap.put("tRunJob_3_CHILD_RETURN_CODE", childJob_tRunJob_3.getErrorCode());
+		    }
+		    if (childJob_tRunJob_3.getExceptionStackTrace() != null) { 
+		    	globalMap.put("tRunJob_3_CHILD_EXCEPTION_STACKTRACE", childJob_tRunJob_3.getExceptionStackTrace());
+		    }
+	  
+			 
+				if (childJob_tRunJob_3.getErrorCode() != null || ("failure").equals(childJob_tRunJob_3.getStatus())) {
+	        		throw new RuntimeException("Child job running failed.\n"+childJob_tRunJob_3.getException().getClass().getName() + ": " + childJob_tRunJob_3.getException().getMessage());
+				}
+			
+	  	
+
+ 
+
+
+	tos_count_tRunJob_3++;
+
+/**
+ * [tRunJob_3 main ] stop
+ */
+	
+	/**
+	 * [tRunJob_3 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_3 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tRunJob_3 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_3 process_data_end ] stop
+ */
+	
+	/**
+	 * [tRunJob_3 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_3";
+
+	
+
+ 
+
+ok_Hash.put("tRunJob_3", true);
+end_Hash.put("tRunJob_3", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tRunJob_3 end ] stop
+ */
+				}//end the resume
+
+				
+				    			if(resumeEntryMethodName == null || globalResumeTicket){
+				    				resumeUtil.addLog("CHECKPOINT", "CONNECTION:SUBJOB_OK:tRunJob_3:OnSubjobOk", "", Thread.currentThread().getId() + "", "", "", "", "", "");
+								}	    				    			
+					    	
+								if(execStat){    	
+									runStat.updateStatOnConnection("OnSubjobOk5", 0, "ok");
+								} 
+							
+							tJava_2Process(globalMap); 
+						
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tRunJob_3 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tRunJob_3";
+
+	
+
+ 
+
+
+
+/**
+ * [tRunJob_3 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tRunJob_3_SUBPROCESS_STATE", 1);
+	}
+	
+
+public void tJava_2Process(final java.util.Map<String, Object> globalMap) throws TalendException {
+	globalMap.put("tJava_2_SUBPROCESS_STATE", 0);
+
+ final boolean execStat = this.execStat;
+	
+		String iterateId = "";
+	
+	
+	String currentComponent = "";
+	java.util.Map<String, Object> resourceMap = new java.util.HashMap<String, Object>();
+
+	try {
+			// TDI-39566 avoid throwing an useless Exception
+			boolean resumeIt = true;
+			if (globalResumeTicket == false && resumeEntryMethodName != null) {
+				String currentMethodName = new java.lang.Exception().getStackTrace()[0].getMethodName();
+				resumeIt = resumeEntryMethodName.equals(currentMethodName);
+			}
+			if (resumeIt || globalResumeTicket) { //start the resume
+				globalResumeTicket = true;
+
+
+
+
+
+	
+	/**
+	 * [tJava_2 begin ] start
+	 */
+
+	
+
+	
+		
+		ok_Hash.put("tJava_2", false);
+		start_Hash.put("tJava_2", System.currentTimeMillis());
+		
+	
+	currentComponent="tJava_2";
+
+	
+		int tos_count_tJava_2 = 0;
+		
+
+
+System.out.println("********** Subsetting Files ***************");
+context.dataSourcePath = context.dataSourcePath +"subset/";
+System.out.println("dataSourcePath ==> " + context.dataSourcePath);
+
+context.dataOutputPath = context.dataOutputPath +"subset/";
+System.out.println("dataOutputPath ==> " + context.dataOutputPath);
+
+ 
+
+
+
+/**
+ * [tJava_2 begin ] stop
+ */
+	
+	/**
+	 * [tJava_2 main ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_2";
+
+	
+
+ 
+
+
+	tos_count_tJava_2++;
+
+/**
+ * [tJava_2 main ] stop
+ */
+	
+	/**
+	 * [tJava_2 process_data_begin ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_2 process_data_begin ] stop
+ */
+	
+	/**
+	 * [tJava_2 process_data_end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_2 process_data_end ] stop
+ */
+	
+	/**
+	 * [tJava_2 end ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_2";
+
+	
+
+ 
+
+ok_Hash.put("tJava_2", true);
+end_Hash.put("tJava_2", System.currentTimeMillis());
+
+
+
+
+/**
+ * [tJava_2 end ] stop
+ */
+				}//end the resume
+
+				
+
+
+
+	
+			}catch(java.lang.Exception e){	
+				
+				TalendException te = new TalendException(e, currentComponent, globalMap);
+				
+				throw te;
+			}catch(java.lang.Error error){	
+				
+					runStat.stopThreadStat();
+				
+				throw error;
+			}finally{
+				
+				try{
+					
+	
+	/**
+	 * [tJava_2 finally ] start
+	 */
+
+	
+
+	
+	
+	currentComponent="tJava_2";
+
+	
+
+ 
+
+
+
+/**
+ * [tJava_2 finally ] stop
+ */
+				}catch(java.lang.Exception e){	
+					//ignore
+				}catch(java.lang.Error error){
+					//ignore
+				}
+				resourceMap = null;
+			}
+		
+
+		globalMap.put("tJava_2_SUBPROCESS_STATE", 1);
 	}
 	
 
@@ -2028,28 +2576,10 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                             context.dictOutputPath=(String) context.getProperty("dictOutputPath");
                         context.setContextType("dictSourcePath", "id_String");
                             context.dictSourcePath=(String) context.getProperty("dictSourcePath");
-                        context.setContextType("AgeInYearVardIdentifier", "id_String");
-                            context.AgeInYearVardIdentifier=(String) context.getProperty("AgeInYearVardIdentifier");
-                        context.setContextType("consentVarName", "id_String");
-                            context.consentVarName=(String) context.getProperty("consentVarName");
-                        context.setContextType("fileNameSubject", "id_String");
-                            context.fileNameSubject=(String) context.getProperty("fileNameSubject");
-                        context.setContextType("GenderVardIdentifier", "id_String");
-                            context.GenderVardIdentifier=(String) context.getProperty("GenderVardIdentifier");
-                        context.setContextType("studyId", "id_String");
-                            context.studyId=(String) context.getProperty("studyId");
-                        context.setContextType("studyName", "id_String");
-                            context.studyName=(String) context.getProperty("studyName");
-                        context.setContextType("subjectTableId", "id_String");
-                            context.subjectTableId=(String) context.getProperty("subjectTableId");
                         context.setContextType("dbHost", "id_String");
                             context.dbHost=(String) context.getProperty("dbHost");
                         context.setContextType("dbName", "id_String");
                             context.dbName=(String) context.getProperty("dbName");
-                        context.setContextType("dbPort", "id_String");
-                            context.dbPort=(String) context.getProperty("dbPort");
-                        context.setContextType("dbUser", "id_String");
-                            context.dbUser=(String) context.getProperty("dbUser");
                         context.setContextType("dbPassword", "id_Password");
                             String pwd_dbPassword_value = context.getProperty("dbPassword");
                             context.dbPassword = null;
@@ -2065,8 +2595,40 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                                     }
                                 }
                             }
+                        context.setContextType("dbPort", "id_String");
+                            context.dbPort=(String) context.getProperty("dbPort");
                         context.setContextType("dbSchema", "id_String");
                             context.dbSchema=(String) context.getProperty("dbSchema");
+                        context.setContextType("dbUser", "id_String");
+                            context.dbUser=(String) context.getProperty("dbUser");
+                        context.setContextType("AgeInYearVardIdentifier", "id_String");
+                            context.AgeInYearVardIdentifier=(String) context.getProperty("AgeInYearVardIdentifier");
+                        context.setContextType("consentVarName", "id_String");
+                            context.consentVarName=(String) context.getProperty("consentVarName");
+                        context.setContextType("fileNameSubject", "id_String");
+                            context.fileNameSubject=(String) context.getProperty("fileNameSubject");
+                        context.setContextType("GenderVardIdentifier", "id_String");
+                            context.GenderVardIdentifier=(String) context.getProperty("GenderVardIdentifier");
+                        context.setContextType("studyId", "id_String");
+                            context.studyId=(String) context.getProperty("studyId");
+                        context.setContextType("studyName", "id_String");
+                            context.studyName=(String) context.getProperty("studyName");
+                        context.setContextType("subjectTableId", "id_String");
+                            context.subjectTableId=(String) context.getProperty("subjectTableId");
+                        context.setContextType("number_to_keep", "id_Integer");
+                            try{
+                                context.number_to_keep=routines.system.ParserUtils.parseTo_Integer (context.getProperty("number_to_keep"));
+                            } catch(NumberFormatException e){
+                                System.err.println(String.format("Null value will be used for context parameter %s: %s", "number_to_keep", e.getMessage()));
+                                context.number_to_keep=null;
+                            }
+                        context.setContextType("subset", "id_Boolean");
+                            try{
+                                context.subset=routines.system.ParserUtils.parseTo_Boolean (context.getProperty("subset"));
+                            } catch(NumberFormatException e){
+                                System.err.println(String.format("Null value will be used for context parameter %s: %s", "subset", e.getMessage()));
+                                context.subset=null;
+                            }
                 } 
                 public void processAllContext() {
                         processContext_0();
@@ -2090,6 +2652,18 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                 context.dictOutputPath = (String) parentContextMap.get("dictOutputPath");
             }if (parentContextMap.containsKey("dictSourcePath")) {
                 context.dictSourcePath = (String) parentContextMap.get("dictSourcePath");
+            }if (parentContextMap.containsKey("dbHost")) {
+                context.dbHost = (String) parentContextMap.get("dbHost");
+            }if (parentContextMap.containsKey("dbName")) {
+                context.dbName = (String) parentContextMap.get("dbName");
+            }if (parentContextMap.containsKey("dbPassword")) {
+                context.dbPassword = (java.lang.String) parentContextMap.get("dbPassword");
+            }if (parentContextMap.containsKey("dbPort")) {
+                context.dbPort = (String) parentContextMap.get("dbPort");
+            }if (parentContextMap.containsKey("dbSchema")) {
+                context.dbSchema = (String) parentContextMap.get("dbSchema");
+            }if (parentContextMap.containsKey("dbUser")) {
+                context.dbUser = (String) parentContextMap.get("dbUser");
             }if (parentContextMap.containsKey("AgeInYearVardIdentifier")) {
                 context.AgeInYearVardIdentifier = (String) parentContextMap.get("AgeInYearVardIdentifier");
             }if (parentContextMap.containsKey("consentVarName")) {
@@ -2104,18 +2678,10 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                 context.studyName = (String) parentContextMap.get("studyName");
             }if (parentContextMap.containsKey("subjectTableId")) {
                 context.subjectTableId = (String) parentContextMap.get("subjectTableId");
-            }if (parentContextMap.containsKey("dbHost")) {
-                context.dbHost = (String) parentContextMap.get("dbHost");
-            }if (parentContextMap.containsKey("dbName")) {
-                context.dbName = (String) parentContextMap.get("dbName");
-            }if (parentContextMap.containsKey("dbPort")) {
-                context.dbPort = (String) parentContextMap.get("dbPort");
-            }if (parentContextMap.containsKey("dbUser")) {
-                context.dbUser = (String) parentContextMap.get("dbUser");
-            }if (parentContextMap.containsKey("dbPassword")) {
-                context.dbPassword = (java.lang.String) parentContextMap.get("dbPassword");
-            }if (parentContextMap.containsKey("dbSchema")) {
-                context.dbSchema = (String) parentContextMap.get("dbSchema");
+            }if (parentContextMap.containsKey("number_to_keep")) {
+                context.number_to_keep = (Integer) parentContextMap.get("number_to_keep");
+            }if (parentContextMap.containsKey("subset")) {
+                context.subset = (Boolean) parentContextMap.get("subset");
             }
         }
 
@@ -2343,6 +2909,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     60335 characters generated by Talend Open Studio for Data Integration 
- *     on the 3 avril 2019 17:05:56 EDT
+ *     72612 characters generated by Talend Open Studio for Data Integration 
+ *     on the 8 avril 2019 12:49:08 EDT
  ************************************************************************************************/
