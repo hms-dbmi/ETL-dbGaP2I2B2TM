@@ -219,6 +219,8 @@
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.dictOutputPath"/>
       <elementValue elementRef="PARAM_NAME_COLUMN" value="dictSourcePath"/>
       <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.dictSourcePath"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="studyName"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.studyName"/>
     </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
