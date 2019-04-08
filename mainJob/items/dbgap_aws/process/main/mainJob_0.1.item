@@ -166,7 +166,7 @@
   </node>
   <node componentName="tJavaRow" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="576" posY="128">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJavaRow_1" show="false"/>
-    <elementParameter field="MEMO_JAVA" name="CODE" value="String line = row1.line;&#xA;&#xA;if( line.startsWith(&quot;dataSourcePath&quot;)){&#xA;&#x9;context.dataSourcePath = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;dataSourcePath ==> &quot; + context.dataSourcePath);&#xA;}&#xA;if( line.startsWith(&quot;dataOutputPath&quot;)){&#xA;&#x9;context.dataOutputPath = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;dataOutputPath ==> &quot; + context.dataOutputPath);&#xA;}&#xA;if( line.startsWith(&quot;dictSourcePath&quot;)){&#xA;&#x9;context.dictSourcePath = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;dictSourcePath ==> &quot; + context.dictSourcePath);&#xA;}&#xA;if( line.startsWith(&quot;dictOutputPath&quot;)){&#xA;&#x9;context.dictOutputPath = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;dictOutputPath ==> &quot; + context.dictOutputPath);&#xA;}&#xA;if( line.startsWith(&quot;studyId&quot;)){&#xA;&#x9;context.studyId = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;studyId ==> &quot; + context.studyId);&#xA;}&#xA;if( line.startsWith(&quot;studyName&quot;)){&#xA;&#x9;context.studyName = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;studyName ==> &quot; + context.studyName);&#xA;}&#xA;if( line.startsWith(&quot;subjectTableId&quot;)){&#xA;&#x9;context.subjectTableId = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;subjectTableId ==> &quot; + context.subjectTableId);&#xA;}&#xA;&#xA;if( line.startsWith(&quot;subset&quot;)){&#xA;&#x9;context.subset = Boolean.parseBoolean(line.split(&quot;=&quot;)[1]);&#xA;&#x9;System.out.println(&quot;subset ==> &quot; + context.subset);&#xA;}&#xA;&#xA;if( line.startsWith(&quot;number_to_keep&quot;)){&#xA;&#x9;context.number_to_keep = Integer.parseInt(line.split(&quot;=&quot;)[1]);&#xA;&#x9;System.out.println(&quot;number_to_keep ==> &quot; + context.number_to_keep);&#xA;}&#xA;"/>
+    <elementParameter field="MEMO_JAVA" name="CODE" value="String line = row1.line;&#xA;&#xA;if( line.startsWith(&quot;dataSourcePath&quot;)){&#xA;&#x9;context.dataSourcePath = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;dataSourcePath ==> &quot; + context.dataSourcePath);&#xA;}&#xA;if( line.startsWith(&quot;dataOutputPath&quot;)){&#xA;&#x9;context.dataOutputPath = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;dataOutputPath ==> &quot; + context.dataOutputPath);&#xA;}&#xA;if( line.startsWith(&quot;dictSourcePath&quot;)){&#xA;&#x9;context.dictSourcePath = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;dictSourcePath ==> &quot; + context.dictSourcePath);&#xA;}&#xA;if( line.startsWith(&quot;dictOutputPath&quot;)){&#xA;&#x9;context.dictOutputPath = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;dictOutputPath ==> &quot; + context.dictOutputPath);&#xA;}&#xA;if( line.startsWith(&quot;studyId&quot;)){&#xA;&#x9;context.studyId = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;studyId ==> &quot; + context.studyId);&#xA;}&#xA;if( line.startsWith(&quot;studyName&quot;)){&#xA;&#x9;context.studyName = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;studyName ==> &quot; + context.studyName);&#xA;}&#xA;if( line.startsWith(&quot;subjectTableId&quot;)){&#xA;&#x9;context.subjectTableId = line.split(&quot;=&quot;)[1];&#xA;&#x9;System.out.println(&quot;subjectTableId ==> &quot; + context.subjectTableId);&#xA;}&#xA;&#xA;if( line.startsWith(&quot;subset&quot;)){&#xA;&#x9;context.subset = Boolean.parseBoolean(line.split(&quot;=&quot;)[1].trim());&#xA;&#x9;System.out.println(&quot;subset ==> &quot; + context.subset);&#xA;}&#xA;&#xA;if( line.startsWith(&quot;number_to_keep&quot;)){&#xA;&#x9;context.number_to_keep = Integer.parseInt(line.split(&quot;=&quot;)[1].trim());&#xA;&#x9;System.out.println(&quot;number_to_keep ==> &quot; + context.number_to_keep);&#xA;}&#xA;"/>
     <elementParameter field="MEMO_IMPORT" name="IMPORT" value="//import java.util.List;"/>
     <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
     <metadata connector="FLOW" name="tJavaRow_1"/>
@@ -246,7 +246,20 @@
     <elementParameter field="CHECK" name="USE_INDEPENDENT_PROCESS" value="false"/>
     <elementParameter field="CHECK" name="DIE_ON_CHILD_ERROR" value="true"/>
     <elementParameter field="CHECK" name="TRANSMIT_WHOLE_CONTEXT" value="false"/>
-    <elementParameter field="TABLE" name="CONTEXTPARAMS"/>
+    <elementParameter field="TABLE" name="CONTEXTPARAMS">
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="dataSourcePath"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.dataSourcePath"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="dataOutputPath"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.dataOutputPath"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="studyId"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.studyId"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="studyName"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.studyName"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="subjectTableId"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.subjectTableId"/>
+      <elementValue elementRef="PARAM_NAME_COLUMN" value="number_to_keep"/>
+      <elementValue elementRef="PARAM_VALUE_COLUMN" value="context.number_to_keep"/>
+    </elementParameter>
     <elementParameter field="CHECK" name="PROPAGATE_CHILD_RESULT" value="false"/>
     <elementParameter field="CHECK" name="PRINT_PARAMETER" value="false"/>
     <elementParameter field="CHECK" name="TRANSMIT_ORIGINAL_CONTEXT" value="true" show="false"/>
