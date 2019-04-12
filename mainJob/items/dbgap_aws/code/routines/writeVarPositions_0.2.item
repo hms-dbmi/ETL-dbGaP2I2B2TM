@@ -65,6 +65,7 @@ public class writeVarPositions {
     public static void write(String pos,String varIdentifier,String fileName,String dataFileName) {
 //    	int posDef = getCounter(fileName+".counter")+Integer.parseInt(pos);
     	int posDef = Integer.parseInt(pos);
+//    	System.out.println(fileName + "====> \""+dataFileName+":"+posDef+"\",\""+varIdentifier+"\"");
     	writeLineToFile(fileName,"\""+dataFileName+":"+posDef+"\",\""+varIdentifier+"\"",true);
     }
     
