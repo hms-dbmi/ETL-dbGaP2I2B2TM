@@ -556,7 +556,7 @@
       <column comment="" key="false" length="250" name="participant_set" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="dictComplet">
         <mapperTableEntries name="varIdentifier" expression="variables.study_id+&quot;.&quot;+ variables.table_id + &quot;.p&quot; + variables.participant_set  + &quot;.&quot; + variables.variable_id " type="id_String" nullable="true"/>
@@ -706,10 +706,10 @@
       <column comment="" key="false" length="24" name="date_created" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="c_path" expression="&quot;\\&quot;+dictComplet.studyName +&quot;\\&quot;+dictComplet.tabelName +&quot;\\&quot;" type="id_String"/>
-        <mapperTableEntries name="c_symbol" expression="dictComplet.variable_description + &quot;(&quot;+dictComplet.variable_name +&quot;) &quot;" type="id_String"/>
+        <mapperTableEntries name="c_symbol" expression="dictComplet.variable_description + &quot; (&quot;+dictComplet.variable_name +&quot;)&quot;" type="id_String"/>
         <mapperTableEntries name="fullname" expression="Var.c_path+Var.c_symbol+&quot;\\&quot; " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="metadataTable" activateCondensedTool="true">
