@@ -570,8 +570,8 @@
         <mapperTableEntries name="variable_name" expression="variables.variable_name.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="variable_description" expression="variables.variable_description.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="variable_type" expression="variables.variable_type " type="id_String" nullable="true"/>
-        <mapperTableEntries name="variable_unit" expression="variables.variable_unit.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="StrValue" expression="values.StrValue.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="variable_unit" expression="(variables.variable_unit != null)?variables.variable_unit.replaceAll(&quot;;&quot;, &quot;.&quot;):variables.variable_unit " type="id_String" nullable="true"/>
+        <mapperTableEntries name="StrValue" expression="(values.StrValue != null)?values.StrValue.replaceAll(&quot;;&quot;, &quot;.&quot;):values.StrValue " type="id_String" nullable="true"/>
         <mapperTableEntries name="code" expression="values.code " type="id_String" nullable="true"/>
         <mapperTableEntries name="participant_set" expression="variables.participant_set " type="id_String" nullable="true"/>
       </outputTables>
@@ -706,7 +706,7 @@
       <column comment="" key="false" length="24" name="date_created" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="c_path" expression="&quot;\\&quot;+dictComplet.studyName +&quot;\\&quot;+dictComplet.tabelName +&quot;\\&quot;" type="id_String"/>
         <mapperTableEntries name="c_symbol" expression="dictComplet.variable_description + &quot;(&quot;+dictComplet.variable_name +&quot;) &quot;" type="id_String"/>
