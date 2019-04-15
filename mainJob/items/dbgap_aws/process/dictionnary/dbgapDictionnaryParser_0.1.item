@@ -556,22 +556,22 @@
       <column comment="" key="false" length="250" name="participant_set" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="dictComplet">
         <mapperTableEntries name="varIdentifier" expression="variables.study_id+&quot;.&quot;+ variables.table_id + &quot;.p&quot; + variables.participant_set  + &quot;.&quot; + variables.variable_id " type="id_String" nullable="true"/>
-        <mapperTableEntries name="studyName" expression="variables.studyName " type="id_String" nullable="true"/>
-        <mapperTableEntries name="tabelName" expression="variables.tabelName " type="id_String" nullable="true"/>
+        <mapperTableEntries name="studyName" expression="variables.studyName.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="tabelName" expression="variables.tabelName.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="table_id" expression="variables.table_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="study_id" expression="variables.study_id " type="id_String" nullable="true"/>
-        <mapperTableEntries name="description" expression="variables.description " type="id_String" nullable="true"/>
+        <mapperTableEntries name="description" expression="variables.description.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="date_created" expression="variables.date_created " type="id_String" nullable="true"/>
         <mapperTableEntries name="variable_id" expression="variables.variable_id " type="id_String" nullable="true"/>
-        <mapperTableEntries name="variable_name" expression="variables.variable_name " type="id_String" nullable="true"/>
-        <mapperTableEntries name="variable_description" expression="variables.variable_description " type="id_String" nullable="true"/>
+        <mapperTableEntries name="variable_name" expression="variables.variable_name.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="variable_description" expression="variables.variable_description.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="variable_type" expression="variables.variable_type " type="id_String" nullable="true"/>
-        <mapperTableEntries name="variable_unit" expression="variables.variable_unit " type="id_String" nullable="true"/>
-        <mapperTableEntries name="StrValue" expression="values.StrValue " type="id_String" nullable="true"/>
+        <mapperTableEntries name="variable_unit" expression="variables.variable_unit.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
+        <mapperTableEntries name="StrValue" expression="values.StrValue.replaceAll(&quot;;&quot;, &quot;.&quot;) " type="id_String" nullable="true"/>
         <mapperTableEntries name="code" expression="values.code " type="id_String" nullable="true"/>
         <mapperTableEntries name="participant_set" expression="variables.participant_set " type="id_String" nullable="true"/>
       </outputTables>
