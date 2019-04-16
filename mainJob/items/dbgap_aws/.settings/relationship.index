@@ -261,6 +261,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "NormalizeForETL",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
     "id" : "Numeric",
     "version" : "Latest",
     "type" : "routine"
@@ -384,6 +388,10 @@
     "type" : "routine"
   }, {
     "id" : "Mathematical",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "NormalizeForETL",
     "version" : "Latest",
     "type" : "routine"
   }, {

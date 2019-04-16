@@ -131,6 +131,7 @@
     <routinesParameter id="_JCV1wEzkEemELd6-kJchZg" name="TalendDate"/>
     <routinesParameter id="_JA9VsEzkEemELd6-kJchZg" name="TalendStringUtil"/>
     <routinesParameter id="_JCTZgEzkEemELd6-kJchZg" name="TalendString"/>
+    <routinesParameter id="_CcXqgGBwEemmtsDF3rcmEQ" name="NormalizeForETL"/>
   </parameters>
   <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="160">
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
@@ -548,11 +549,11 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mappingFileFinal" activateCondensedTool="true">
         <mapperTableEntries name="key" expression="mappings.key " type="id_String" nullable="true"/>
-        <mapperTableEntries name="Concept_Path" expression="dictVarDef.c_fullname.replaceAll(&quot;,&quot;, &quot;.&quot;) " type="id_String"/>
+        <mapperTableEntries name="Concept_Path" expression="NormalizeForETL.cleanString4ETL(dictVarDef.c_fullname) " type="id_String"/>
         <mapperTableEntries name="Supplement_Path" expression="" type="id_String" nullable="true"/>
         <mapperTableEntries name="Data_Type" expression="(dictVarDef.codedVar)?&quot;TEXT&quot;:dictVarDef.variable_type " type="id_String" nullable="true"/>
         <mapperTableEntries name="Options" expression="" type="id_String" nullable="true"/>
