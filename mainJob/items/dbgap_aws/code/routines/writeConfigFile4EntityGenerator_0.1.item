@@ -34,7 +34,7 @@ public class writeConfigFile4EntityGenerator {
 		writeLineToFile(fileName,"# URI to File or Directory that contains data to be loaded", false);
 		writeLineToFile(fileName,"filename="+dataPath,true);
 		writeLineToFile(fileName,"# URI to Mapping file",true);
-		writeLineToFile(fileName,"mappingfile="+dataPath+"MAPPING/mapping.csv",true);
+		writeLineToFile(fileName,"mappingfile="+dataPath+"MAPPING/built-mapping.csv",true);
 		writeLineToFile(fileName,"# URI to Patient Mapping file",true);
 		writeLineToFile(fileName,"patientmappingfile="+dataPath+"MAPPING/mapping.csv.patient",true);
 		writeLineToFile(fileName,"# Location Table Entity files will be written to.",true);
