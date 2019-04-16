@@ -293,11 +293,27 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
-    "id" : "_4Ng7MFFYEemrpuL4gWi3eg - metadata",
+    "id" : "fileWriter",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "writeSpecificVars",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "_17tYwGCPEemmtsDF3rcmEQ - metadata",
     "version" : "Latest",
     "type" : "schema"
   }, {
     "id" : "_fvwGoFFqEemrpuL4gWi3eg - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_l9VQgGCPEemmtsDF3rcmEQ - metadata",
+    "version" : "Latest",
+    "type" : "schema"
+  }, {
+    "id" : "_t2ch0GCPEemmtsDF3rcmEQ - metadata",
     "version" : "Latest",
     "type" : "schema"
   } ]
@@ -562,6 +578,10 @@
     "type" : "routine"
   }, {
     "id" : "TalendStringUtil",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
+    "id" : "writeSpecificVars",
     "version" : "Latest",
     "type" : "routine"
   }, {
