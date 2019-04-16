@@ -1,34 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <talendfile:ProcessType xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMapper="http://www.talend.org/mapper" xmlns:talendfile="platform:/resource/org.talend.model/model/TalendFile.xsd" defaultContext="Default" jobType="Standard">
   <context confirmationNeeded="false" name="Default">
-    <contextParameter comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="/home/vianney/tempMesa/TESTCase/"/>
+    <contextParameter comment="" name="mappingDirPath" prompt="mappingDirPath?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter comment="" name="mappingFilePath" prompt="mappingFilePath?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="final data sub directory (sub directory of tempRootPath)" name="dataOutputPath" prompt="dataOutputPath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="/home/vianney/tempMesa/TESTCase/STRUCT_DATA/"/>
+    <contextParameter comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value="/home/vianney/tempMesa/TESTCase/"/>
     <contextParameter comment="" name="dbHost" prompt="dbHost?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="localhost"/>
     <contextParameter comment="" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
     <contextParameter comment="" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_Password" value="1QY6ZyNqCD4BAhKeqSkILQ=="/>
     <contextParameter comment="" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="5432"/>
     <contextParameter comment="" name="dbSchema" prompt="dbSchema?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="public"/>
     <contextParameter comment="" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
+    <contextParameter comment="" name="AgeInYearVarIdentifier" prompt="AgeInYearVarIdentifier?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="phs000209.v13.pht001116.v10.p3.phv00084442.v3"/>
+    <contextParameter comment="" name="GenderVarIdentifier" prompt="GenderVarIdentifier?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="phs000209.v13.pht001116.v10.p3.phv00084446.v2"/>
     <contextParameter comment="" name="studyId" prompt="studyId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="phs000209.v13"/>
-    <contextParameter comment="" name="mappingDirPath" prompt="mappingDirPath?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="mappingFilePath" prompt="mappingFilePath?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="MESA"/>
     <contextParameter comment="" name="subjectTableId" prompt="subjectTableId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="pht001108.v4"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
-    <contextParameter comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
-    <contextParameter comment="final data sub directory (sub directory of tempRootPath)" name="dataOutputPath" prompt="dataOutputPath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
-    <contextParameter comment="" name="studyId" prompt="studyId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
     <contextParameter comment="" name="mappingDirPath" prompt="mappingDirPath?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter comment="" name="mappingFilePath" prompt="mappingFilePath?" promptNeeded="false" type="id_String" value=""/>
-    <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
-    <contextParameter comment="" name="subjectTableId" prompt="subjectTableId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
+    <contextParameter comment="final data sub directory (sub directory of tempRootPath)" name="dataOutputPath" prompt="dataOutputPath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
+    <contextParameter comment="Subdirectory for data source" name="dataSourcePath" prompt="dataSourcePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
     <contextParameter comment="" name="dbHost" prompt="dbHost?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="db-dict"/>
     <contextParameter comment="" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
-    <contextParameter comment="" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="5432"/>
-    <contextParameter comment="" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
     <contextParameter comment="" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_Password" value="1QY6ZyNqCD4BAhKeqSkILQ=="/>
+    <contextParameter comment="" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="5432"/>
     <contextParameter comment="" name="dbSchema" prompt="dbSchema?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="public"/>
+    <contextParameter comment="" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
+    <contextParameter comment="" name="AgeInYearVarIdentifier" prompt="AgeInYearVarIdentifier?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
+    <contextParameter comment="" name="GenderVarIdentifier" prompt="GenderVarIdentifier?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
+    <contextParameter comment="" name="studyId" prompt="studyId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
+    <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
+    <contextParameter comment="" name="subjectTableId" prompt="subjectTableId?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="160" show="false"/>
@@ -549,7 +553,7 @@
       </column>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="mappingFileFinal" activateCondensedTool="true">
         <mapperTableEntries name="key" expression="mappings.key " type="id_String" nullable="true"/>
@@ -1208,15 +1212,15 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tJava_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tSystem_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tJava_1">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tFlowToIterate_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
@@ -1237,14 +1241,14 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate4" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tChronometerStop_5">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
+  </connection>
   <connection connectorName="FLOW" label="dataPrepared" lineStyle="0" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tMap_1">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="dataPrepared" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileInputDelimited_1" offsetLabelX="0" offsetLabelY="0" source="tFileInputDelimited_1" target="tChronometerStop_5">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk6" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="dataCompleted" lineStyle="0" metaname="dataCompleted" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tFileOutputDelimited_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">

@@ -1268,6 +1268,68 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
 	java.util.Map<String, Object> parentContextMap_tRunJob_2 = new java.util.HashMap<String, Object>();
 
 	
+		
+		context.synchronizeContext();
+            class ContextProcessor_tRunJob_2 {
+                    private void transmitContext_0() {
+                    parentContextMap_tRunJob_2.put("configFilePath", context.configFilePath);
+                    paraList_tRunJob_2.add("--context_type " + "configFilePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dataOutputPath", context.dataOutputPath);
+                    paraList_tRunJob_2.add("--context_type " + "dataOutputPath" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dataSourcePath", context.dataSourcePath);
+                    paraList_tRunJob_2.add("--context_type " + "dataSourcePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dictOutputPath", context.dictOutputPath);
+                    paraList_tRunJob_2.add("--context_type " + "dictOutputPath" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dictSourcePath", context.dictSourcePath);
+                    paraList_tRunJob_2.add("--context_type " + "dictSourcePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dbHost", context.dbHost);
+                    paraList_tRunJob_2.add("--context_type " + "dbHost" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dbName", context.dbName);
+                    paraList_tRunJob_2.add("--context_type " + "dbName" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dbPassword", context.dbPassword);
+                    paraList_tRunJob_2.add("--context_type " + "dbPassword" + "=" + "id_Password");
+                    parentContextMap_tRunJob_2.put("dbPort", context.dbPort);
+                    paraList_tRunJob_2.add("--context_type " + "dbPort" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dbSchema", context.dbSchema);
+                    paraList_tRunJob_2.add("--context_type " + "dbSchema" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("dbUser", context.dbUser);
+                    paraList_tRunJob_2.add("--context_type " + "dbUser" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
+                    paraList_tRunJob_2.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("consentVarName", context.consentVarName);
+                    paraList_tRunJob_2.add("--context_type " + "consentVarName" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("fileNameSubject", context.fileNameSubject);
+                    paraList_tRunJob_2.add("--context_type " + "fileNameSubject" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("GenderVarIdentifier", context.GenderVarIdentifier);
+                    paraList_tRunJob_2.add("--context_type " + "GenderVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("studyId", context.studyId);
+                    paraList_tRunJob_2.add("--context_type " + "studyId" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("studyName", context.studyName);
+                    paraList_tRunJob_2.add("--context_type " + "studyName" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("subjectTableId", context.subjectTableId);
+                    paraList_tRunJob_2.add("--context_type " + "subjectTableId" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("number_to_keep", context.number_to_keep);
+                    paraList_tRunJob_2.add("--context_type " + "number_to_keep" + "=" + "id_Integer");
+                    parentContextMap_tRunJob_2.put("subset", context.subset);
+                    paraList_tRunJob_2.add("--context_type " + "subset" + "=" + "id_Boolean");
+                        }
+                    public void transmitAllContext() {
+                        transmitContext_0();
+                    }
+            }
+            new ContextProcessor_tRunJob_2().transmitAllContext();
+		java.util.Enumeration<?> propertyNames_tRunJob_2 = context.propertyNames();
+		while (propertyNames_tRunJob_2.hasMoreElements()) {
+			String key_tRunJob_2 = (String) propertyNames_tRunJob_2.nextElement();
+			Object value_tRunJob_2 = (Object) context.get(key_tRunJob_2);
+			if(value_tRunJob_2!=null) {  
+				paraList_tRunJob_2.add("--context_param " + key_tRunJob_2 + "=" + value_tRunJob_2);
+			} else {
+				paraList_tRunJob_2.add("--context_param " + key_tRunJob_2 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+			}
+			
+		}
+		
 
 	Object obj_tRunJob_2 = null;
 
@@ -1573,6 +1635,68 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
 	java.util.Map<String, Object> parentContextMap_tRunJob_3 = new java.util.HashMap<String, Object>();
 
 	
+		
+		context.synchronizeContext();
+            class ContextProcessor_tRunJob_3 {
+                    private void transmitContext_0() {
+                    parentContextMap_tRunJob_3.put("configFilePath", context.configFilePath);
+                    paraList_tRunJob_3.add("--context_type " + "configFilePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dataOutputPath", context.dataOutputPath);
+                    paraList_tRunJob_3.add("--context_type " + "dataOutputPath" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dataSourcePath", context.dataSourcePath);
+                    paraList_tRunJob_3.add("--context_type " + "dataSourcePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dictOutputPath", context.dictOutputPath);
+                    paraList_tRunJob_3.add("--context_type " + "dictOutputPath" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dictSourcePath", context.dictSourcePath);
+                    paraList_tRunJob_3.add("--context_type " + "dictSourcePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dbHost", context.dbHost);
+                    paraList_tRunJob_3.add("--context_type " + "dbHost" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dbName", context.dbName);
+                    paraList_tRunJob_3.add("--context_type " + "dbName" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dbPassword", context.dbPassword);
+                    paraList_tRunJob_3.add("--context_type " + "dbPassword" + "=" + "id_Password");
+                    parentContextMap_tRunJob_3.put("dbPort", context.dbPort);
+                    paraList_tRunJob_3.add("--context_type " + "dbPort" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dbSchema", context.dbSchema);
+                    paraList_tRunJob_3.add("--context_type " + "dbSchema" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("dbUser", context.dbUser);
+                    paraList_tRunJob_3.add("--context_type " + "dbUser" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
+                    paraList_tRunJob_3.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("consentVarName", context.consentVarName);
+                    paraList_tRunJob_3.add("--context_type " + "consentVarName" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("fileNameSubject", context.fileNameSubject);
+                    paraList_tRunJob_3.add("--context_type " + "fileNameSubject" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("GenderVarIdentifier", context.GenderVarIdentifier);
+                    paraList_tRunJob_3.add("--context_type " + "GenderVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("studyId", context.studyId);
+                    paraList_tRunJob_3.add("--context_type " + "studyId" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("studyName", context.studyName);
+                    paraList_tRunJob_3.add("--context_type " + "studyName" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("subjectTableId", context.subjectTableId);
+                    paraList_tRunJob_3.add("--context_type " + "subjectTableId" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("number_to_keep", context.number_to_keep);
+                    paraList_tRunJob_3.add("--context_type " + "number_to_keep" + "=" + "id_Integer");
+                    parentContextMap_tRunJob_3.put("subset", context.subset);
+                    paraList_tRunJob_3.add("--context_type " + "subset" + "=" + "id_Boolean");
+                        }
+                    public void transmitAllContext() {
+                        transmitContext_0();
+                    }
+            }
+            new ContextProcessor_tRunJob_3().transmitAllContext();
+		java.util.Enumeration<?> propertyNames_tRunJob_3 = context.propertyNames();
+		while (propertyNames_tRunJob_3.hasMoreElements()) {
+			String key_tRunJob_3 = (String) propertyNames_tRunJob_3.nextElement();
+			Object value_tRunJob_3 = (Object) context.get(key_tRunJob_3);
+			if(value_tRunJob_3!=null) {  
+				paraList_tRunJob_3.add("--context_param " + key_tRunJob_3 + "=" + value_tRunJob_3);
+			} else {
+				paraList_tRunJob_3.add("--context_param " + key_tRunJob_3 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+			}
+			
+		}
+		
 
 	Object obj_tRunJob_3 = null;
 
@@ -2097,6 +2221,68 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
 	java.util.Map<String, Object> parentContextMap_tRunJob_1 = new java.util.HashMap<String, Object>();
 
 	
+		
+		context.synchronizeContext();
+            class ContextProcessor_tRunJob_1 {
+                    private void transmitContext_0() {
+                    parentContextMap_tRunJob_1.put("configFilePath", context.configFilePath);
+                    paraList_tRunJob_1.add("--context_type " + "configFilePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dataOutputPath", context.dataOutputPath);
+                    paraList_tRunJob_1.add("--context_type " + "dataOutputPath" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dataSourcePath", context.dataSourcePath);
+                    paraList_tRunJob_1.add("--context_type " + "dataSourcePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dictOutputPath", context.dictOutputPath);
+                    paraList_tRunJob_1.add("--context_type " + "dictOutputPath" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dictSourcePath", context.dictSourcePath);
+                    paraList_tRunJob_1.add("--context_type " + "dictSourcePath" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dbHost", context.dbHost);
+                    paraList_tRunJob_1.add("--context_type " + "dbHost" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dbName", context.dbName);
+                    paraList_tRunJob_1.add("--context_type " + "dbName" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dbPassword", context.dbPassword);
+                    paraList_tRunJob_1.add("--context_type " + "dbPassword" + "=" + "id_Password");
+                    parentContextMap_tRunJob_1.put("dbPort", context.dbPort);
+                    paraList_tRunJob_1.add("--context_type " + "dbPort" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dbSchema", context.dbSchema);
+                    paraList_tRunJob_1.add("--context_type " + "dbSchema" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("dbUser", context.dbUser);
+                    paraList_tRunJob_1.add("--context_type " + "dbUser" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
+                    paraList_tRunJob_1.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("consentVarName", context.consentVarName);
+                    paraList_tRunJob_1.add("--context_type " + "consentVarName" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("fileNameSubject", context.fileNameSubject);
+                    paraList_tRunJob_1.add("--context_type " + "fileNameSubject" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("GenderVarIdentifier", context.GenderVarIdentifier);
+                    paraList_tRunJob_1.add("--context_type " + "GenderVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("studyId", context.studyId);
+                    paraList_tRunJob_1.add("--context_type " + "studyId" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("studyName", context.studyName);
+                    paraList_tRunJob_1.add("--context_type " + "studyName" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("subjectTableId", context.subjectTableId);
+                    paraList_tRunJob_1.add("--context_type " + "subjectTableId" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("number_to_keep", context.number_to_keep);
+                    paraList_tRunJob_1.add("--context_type " + "number_to_keep" + "=" + "id_Integer");
+                    parentContextMap_tRunJob_1.put("subset", context.subset);
+                    paraList_tRunJob_1.add("--context_type " + "subset" + "=" + "id_Boolean");
+                        }
+                    public void transmitAllContext() {
+                        transmitContext_0();
+                    }
+            }
+            new ContextProcessor_tRunJob_1().transmitAllContext();
+		java.util.Enumeration<?> propertyNames_tRunJob_1 = context.propertyNames();
+		while (propertyNames_tRunJob_1.hasMoreElements()) {
+			String key_tRunJob_1 = (String) propertyNames_tRunJob_1.nextElement();
+			Object value_tRunJob_1 = (Object) context.get(key_tRunJob_1);
+			if(value_tRunJob_1!=null) {  
+				paraList_tRunJob_1.add("--context_param " + key_tRunJob_1 + "=" + value_tRunJob_1);
+			} else {
+				paraList_tRunJob_1.add("--context_param " + key_tRunJob_1 + "=" + NULL_VALUE_EXPRESSION_IN_COMMAND_STRING_FOR_CHILD_JOB_ONLY);
+			}
+			
+		}
+		
 
 	Object obj_tRunJob_1 = null;
 
@@ -2982,6 +3168,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     75674 characters generated by Talend Open Studio for Data Integration 
- *     on the 16 avril 2019 14:57:16 EDT
+ *     89765 characters generated by Talend Open Studio for Data Integration 
+ *     on the 16 avril 2019 15:22:51 EDT
  ************************************************************************************************/
