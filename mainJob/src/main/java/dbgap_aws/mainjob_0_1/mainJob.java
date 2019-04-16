@@ -197,9 +197,9 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(AgeInYearVardIdentifier != null){
+			if(AgeInYearVarIdentifier != null){
 				
-					this.setProperty("AgeInYearVardIdentifier", AgeInYearVardIdentifier.toString());
+					this.setProperty("AgeInYearVarIdentifier", AgeInYearVarIdentifier.toString());
 				
 			}
 			
@@ -215,9 +215,9 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
-			if(GenderVardIdentifier != null){
+			if(GenderVarIdentifier != null){
 				
-					this.setProperty("GenderVardIdentifier", GenderVardIdentifier.toString());
+					this.setProperty("GenderVarIdentifier", GenderVarIdentifier.toString());
 				
 			}
 			
@@ -297,9 +297,9 @@ public String dbUser;
 public String getDbUser(){
 	return this.dbUser;
 }
-public String AgeInYearVardIdentifier;
-public String getAgeInYearVardIdentifier(){
-	return this.AgeInYearVardIdentifier;
+public String AgeInYearVarIdentifier;
+public String getAgeInYearVarIdentifier(){
+	return this.AgeInYearVarIdentifier;
 }
 public String consentVarName;
 public String getConsentVarName(){
@@ -309,9 +309,9 @@ public String fileNameSubject;
 public String getFileNameSubject(){
 	return this.fileNameSubject;
 }
-public String GenderVardIdentifier;
-public String getGenderVardIdentifier(){
-	return this.GenderVardIdentifier;
+public String GenderVarIdentifier;
+public String getGenderVarIdentifier(){
+	return this.GenderVarIdentifier;
 }
 public String studyId;
 public String getStudyId(){
@@ -913,6 +913,16 @@ if( line.startsWith("subset")){
 if( line.startsWith("number_to_keep")){
 	context.number_to_keep = Integer.parseInt(line.split("=")[1].trim());
 	System.out.println("number_to_keep ==> " + context.number_to_keep);
+}
+
+if( line.startsWith("AgeInYearVarIdentifier")){
+	context.AgeInYearVarIdentifier = line.split("=")[1].trim();
+	System.out.println("AgeInYearVarIdentifier ==> " + context.AgeInYearVarIdentifier);
+}
+
+if( line.startsWith("GenderVarIdentifier")){
+	context.GenderVarIdentifier = line.split("=")[1].trim();
+	System.out.println("GenderVarIdentifier ==> " + context.GenderVarIdentifier);
 }
 
     nb_line_tJavaRow_1++;   
@@ -2664,14 +2674,14 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                             context.dbSchema=(String) context.getProperty("dbSchema");
                         context.setContextType("dbUser", "id_String");
                             context.dbUser=(String) context.getProperty("dbUser");
-                        context.setContextType("AgeInYearVardIdentifier", "id_String");
-                            context.AgeInYearVardIdentifier=(String) context.getProperty("AgeInYearVardIdentifier");
+                        context.setContextType("AgeInYearVarIdentifier", "id_String");
+                            context.AgeInYearVarIdentifier=(String) context.getProperty("AgeInYearVarIdentifier");
                         context.setContextType("consentVarName", "id_String");
                             context.consentVarName=(String) context.getProperty("consentVarName");
                         context.setContextType("fileNameSubject", "id_String");
                             context.fileNameSubject=(String) context.getProperty("fileNameSubject");
-                        context.setContextType("GenderVardIdentifier", "id_String");
-                            context.GenderVardIdentifier=(String) context.getProperty("GenderVardIdentifier");
+                        context.setContextType("GenderVarIdentifier", "id_String");
+                            context.GenderVarIdentifier=(String) context.getProperty("GenderVarIdentifier");
                         context.setContextType("studyId", "id_String");
                             context.studyId=(String) context.getProperty("studyId");
                         context.setContextType("studyName", "id_String");
@@ -2727,14 +2737,14 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                 context.dbSchema = (String) parentContextMap.get("dbSchema");
             }if (parentContextMap.containsKey("dbUser")) {
                 context.dbUser = (String) parentContextMap.get("dbUser");
-            }if (parentContextMap.containsKey("AgeInYearVardIdentifier")) {
-                context.AgeInYearVardIdentifier = (String) parentContextMap.get("AgeInYearVardIdentifier");
+            }if (parentContextMap.containsKey("AgeInYearVarIdentifier")) {
+                context.AgeInYearVarIdentifier = (String) parentContextMap.get("AgeInYearVarIdentifier");
             }if (parentContextMap.containsKey("consentVarName")) {
                 context.consentVarName = (String) parentContextMap.get("consentVarName");
             }if (parentContextMap.containsKey("fileNameSubject")) {
                 context.fileNameSubject = (String) parentContextMap.get("fileNameSubject");
-            }if (parentContextMap.containsKey("GenderVardIdentifier")) {
-                context.GenderVardIdentifier = (String) parentContextMap.get("GenderVardIdentifier");
+            }if (parentContextMap.containsKey("GenderVarIdentifier")) {
+                context.GenderVarIdentifier = (String) parentContextMap.get("GenderVarIdentifier");
             }if (parentContextMap.containsKey("studyId")) {
                 context.studyId = (String) parentContextMap.get("studyId");
             }if (parentContextMap.containsKey("studyName")) {
@@ -2972,6 +2982,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     75316 characters generated by Talend Open Studio for Data Integration 
- *     on the 16 avril 2019 13:58:02 EDT
+ *     75674 characters generated by Talend Open Studio for Data Integration 
+ *     on the 16 avril 2019 14:57:16 EDT
  ************************************************************************************************/
