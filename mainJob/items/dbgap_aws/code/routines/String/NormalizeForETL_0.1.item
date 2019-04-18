@@ -25,7 +25,7 @@ public class NormalizeForETL {
         if (str == null){
         	return null;
         }else{
-        	return str.replaceAll(";", ".").replaceAll(",", " ").replaceAll("\"", "");	
+        	return str.replaceAll(";", ".").replaceAll(",", " ").replaceAll("\"", "").replaceAll("\n", " ");	
         }
      }
 }
