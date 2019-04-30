@@ -8,6 +8,7 @@
     <contextParameter xmi:id="_AChBMFFcEemrpuL4gWi3eg" comment="" name="studyId" prompt="studyId?" promptNeeded="false" type="id_String" value="phs000209.v13"/>
     <contextParameter xmi:id="_mT1ZgFF8EemWEfnhHSftpA" comment="" name="AgeInYearVarIdentifier" prompt="AgeInYearVarIdentifier?" promptNeeded="false" type="id_String" value="phs000209.v13.pht001116.v10.p3.phv00084442.v3"/>
     <contextParameter xmi:id="_mT1ZgVF8EemWEfnhHSftpA" comment="" name="GenderVarIdentifier" prompt="GenderVarIdentifier?" promptNeeded="false" type="id_String" value="phs000209.v13.pht001116.v10.p3.phv00084446.v2"/>
+    <contextParameter xmi:id="_y0cOgGtTEemCq7pdfcLoqQ" comment="" name="addVarName" prompt="addVarName?" promptNeeded="false" type="id_Boolean" value="true"/>
   </talendfile:ContextType>
   <talendfile:ContextType xmi:id="_JuFfsFYfEemD6qIJkabH6A" confirmationNeeded="false" name="PROD">
     <contextParameter xmi:id="_JuFfsVYfEemD6qIJkabH6A" comment="" name="studyName" prompt="studyName?" promptNeeded="false" type="id_String" value=""/>
@@ -17,5 +18,6 @@
     <contextParameter xmi:id="_JuFftVYfEemD6qIJkabH6A" comment="" name="studyId" prompt="studyId?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter xmi:id="_JuFftlYfEemD6qIJkabH6A" comment="" name="AgeInYearVarIdentifier" prompt="AgeInYearVarIdentifier?" promptNeeded="false" type="id_String" value=""/>
     <contextParameter xmi:id="_JuFft1YfEemD6qIJkabH6A" comment="" name="GenderVarIdentifier" prompt="GenderVarIdentifier?" promptNeeded="false" type="id_String" value=""/>
+    <contextParameter xmi:id="_y0cOgWtTEemCq7pdfcLoqQ" comment="" name="addVarName" prompt="addVarName?" promptNeeded="false" type="id_Boolean" value=""/>
   </talendfile:ContextType>
 </xmi:XMI>

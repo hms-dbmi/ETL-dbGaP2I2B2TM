@@ -197,6 +197,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(addVarName != null){
+				
+					this.setProperty("addVarName", addVarName.toString());
+				
+			}
+			
 			if(AgeInYearVarIdentifier != null){
 				
 					this.setProperty("AgeInYearVarIdentifier", AgeInYearVarIdentifier.toString());
@@ -296,6 +302,10 @@ public String getDbSchema(){
 public String dbUser;
 public String getDbUser(){
 	return this.dbUser;
+}
+public Boolean addVarName;
+public Boolean getAddVarName(){
+	return this.addVarName;
 }
 public String AgeInYearVarIdentifier;
 public String getAgeInYearVarIdentifier(){
@@ -914,6 +924,10 @@ if( line.startsWith("number_to_keep")){
 	context.number_to_keep = Integer.parseInt(line.split("=")[1].trim());
 	System.out.println("number_to_keep ==> " + context.number_to_keep);
 }
+if( line.startsWith("addVarName")){
+	context.addVarName = Boolean.parseBoolean(line.split("=")[1].trim());
+	System.out.println("addVarName ==> " + context.addVarName);
+}
 
 if( line.startsWith("AgeInYearVarIdentifier")){
 	context.AgeInYearVarIdentifier = line.split("=")[1].trim();
@@ -1294,6 +1308,8 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_2.add("--context_type " + "dbSchema" + "=" + "id_String");
                     parentContextMap_tRunJob_2.put("dbUser", context.dbUser);
                     paraList_tRunJob_2.add("--context_type " + "dbUser" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("addVarName", context.addVarName);
+                    paraList_tRunJob_2.add("--context_type " + "addVarName" + "=" + "id_Boolean");
                     parentContextMap_tRunJob_2.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
                     paraList_tRunJob_2.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
                     parentContextMap_tRunJob_2.put("consentVarName", context.consentVarName);
@@ -1661,6 +1677,8 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_3.add("--context_type " + "dbSchema" + "=" + "id_String");
                     parentContextMap_tRunJob_3.put("dbUser", context.dbUser);
                     paraList_tRunJob_3.add("--context_type " + "dbUser" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("addVarName", context.addVarName);
+                    paraList_tRunJob_3.add("--context_type " + "addVarName" + "=" + "id_Boolean");
                     parentContextMap_tRunJob_3.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
                     paraList_tRunJob_3.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
                     parentContextMap_tRunJob_3.put("consentVarName", context.consentVarName);
@@ -2247,6 +2265,8 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_1.add("--context_type " + "dbSchema" + "=" + "id_String");
                     parentContextMap_tRunJob_1.put("dbUser", context.dbUser);
                     paraList_tRunJob_1.add("--context_type " + "dbUser" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("addVarName", context.addVarName);
+                    paraList_tRunJob_1.add("--context_type " + "addVarName" + "=" + "id_Boolean");
                     parentContextMap_tRunJob_1.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
                     paraList_tRunJob_1.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
                     parentContextMap_tRunJob_1.put("consentVarName", context.consentVarName);
@@ -2860,6 +2880,13 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                             context.dbSchema=(String) context.getProperty("dbSchema");
                         context.setContextType("dbUser", "id_String");
                             context.dbUser=(String) context.getProperty("dbUser");
+                        context.setContextType("addVarName", "id_Boolean");
+                            try{
+                                context.addVarName=routines.system.ParserUtils.parseTo_Boolean (context.getProperty("addVarName"));
+                            } catch(NumberFormatException e){
+                                System.err.println(String.format("Null value will be used for context parameter %s: %s", "addVarName", e.getMessage()));
+                                context.addVarName=null;
+                            }
                         context.setContextType("AgeInYearVarIdentifier", "id_String");
                             context.AgeInYearVarIdentifier=(String) context.getProperty("AgeInYearVarIdentifier");
                         context.setContextType("consentVarName", "id_String");
@@ -2923,6 +2950,8 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                 context.dbSchema = (String) parentContextMap.get("dbSchema");
             }if (parentContextMap.containsKey("dbUser")) {
                 context.dbUser = (String) parentContextMap.get("dbUser");
+            }if (parentContextMap.containsKey("addVarName")) {
+                context.addVarName = (Boolean) parentContextMap.get("addVarName");
             }if (parentContextMap.containsKey("AgeInYearVarIdentifier")) {
                 context.AgeInYearVarIdentifier = (String) parentContextMap.get("AgeInYearVarIdentifier");
             }if (parentContextMap.containsKey("consentVarName")) {
@@ -3168,6 +3197,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     89765 characters generated by Talend Open Studio for Data Integration 
- *     on the 18 avril 2019 10:04:13 EDT
+ *     91371 characters generated by Talend Open Studio for Data Integration 
+ *     on the 30 avril 2019 10:33:44 EDT
  ************************************************************************************************/

@@ -9,18 +9,20 @@
     <contextParameter comment="" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="5432"/>
     <contextParameter comment="" name="dbSchema" prompt="dbSchema?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="public"/>
     <contextParameter comment="" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
+    <contextParameter comment="" name="addVarName" prompt="addVarName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_Boolean" value="true"/>
     <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value="MESA"/>
   </context>
   <context confirmationNeeded="false" name="PROD">
     <contextParameter comment="" name="dictOutputPath" prompt="dictOutputPath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
     <contextParameter comment="Dictionary sub directory" name="dictSourcePath" prompt="dictSourcePath?" promptNeeded="false" repositoryContextId="_eVoakE8QEem0DtxHb_cOcg" type="id_String" value=""/>
-    <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
     <contextParameter comment="" name="dbHost" prompt="dbHost?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="db-dict"/>
     <contextParameter comment="" name="dbName" prompt="dbName?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
-    <contextParameter comment="" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="5432"/>
-    <contextParameter comment="" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
     <contextParameter comment="" name="dbPassword" prompt="dbPassword?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_Password" value="1QY6ZyNqCD4BAhKeqSkILQ=="/>
+    <contextParameter comment="" name="dbPort" prompt="dbPort?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="5432"/>
     <contextParameter comment="" name="dbSchema" prompt="dbSchema?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="public"/>
+    <contextParameter comment="" name="dbUser" prompt="dbUser?" promptNeeded="false" repositoryContextId="_HJDCUFJJEemyHPi3XWkSJg" type="id_String" value="dict_dbGap"/>
+    <contextParameter comment="" name="addVarName" prompt="addVarName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_Boolean" value=""/>
+    <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
   </context>
   <parameters>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32" show="false"/>
@@ -707,10 +709,10 @@
       <column comment="" key="false" length="24" name="date_created" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="c_path" expression="&quot;\\&quot;+dictComplet.studyName +&quot;\\&quot;+dictComplet.tabelName +&quot;\\&quot;" type="id_String"/>
-        <mapperTableEntries name="c_symbol" expression="dictComplet.variable_description + &quot; (&quot;+dictComplet.variable_name +&quot;)&quot;" type="id_String"/>
+        <mapperTableEntries name="c_symbol" expression="(context.addVarName)?&quot;[&quot;+dictComplet.variable_name +&quot;] &quot;+dictComplet.variable_description:dictComplet.variable_description " type="id_String"/>
         <mapperTableEntries name="fullname" expression="Var.c_path+Var.c_symbol+&quot;\\&quot; " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="metadataTable" activateCondensedTool="true">
