@@ -712,7 +712,7 @@
       <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var">
         <mapperTableEntries name="c_path" expression="&quot;\\&quot;+dictComplet.studyName +&quot;\\&quot;+dictComplet.tabelName +&quot;\\&quot;" type="id_String"/>
-        <mapperTableEntries name="c_symbol" expression="(context.addVarName)?&quot;[&quot;+dictComplet.variable_name +&quot;] &quot;+dictComplet.variable_description:dictComplet.variable_description " type="id_String"/>
+        <mapperTableEntries name="c_symbol" expression="(context.addVarName)?&quot;[ &quot;+dictComplet.variable_name +&quot; ] &quot;+dictComplet.variable_description:dictComplet.variable_description " type="id_String"/>
         <mapperTableEntries name="fullname" expression="Var.c_path+Var.c_symbol+&quot;\\&quot; " type="id_String"/>
       </varTables>
       <outputTables sizeState="INTERMEDIATE" name="metadataTable" activateCondensedTool="true">
