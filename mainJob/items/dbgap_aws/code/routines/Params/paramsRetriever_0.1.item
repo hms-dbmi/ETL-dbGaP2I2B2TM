@@ -40,8 +40,8 @@ public class paramsRetriever {
     		if(line.split("=").length==2){
     			param = line.split("=")[1].trim();
     		}
+    		System.out.println(paramName + " ==> h" + param);
     	}
-    	System.out.println(paramName + " ==> " + param);
     	
     	return param;
     }
