@@ -35,10 +35,11 @@ public class paramsRetriever {
     public static String retrieveParams(String line,String paramName) {
     	String param = "";
     	if( line.startsWith(paramName)){
+    		System.out.println(line);
+    		System.out.println(line.split("=").length);
     		if(line.split("=").length==2){
     			param = line.split("=")[1].trim();
     		}
-    		System.out.println(paramName + " ==> " + param);
     	}
     	System.out.println(paramName + " ==> " + param);
     	
