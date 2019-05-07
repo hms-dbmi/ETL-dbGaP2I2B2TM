@@ -1,5 +1,4 @@
 #!/bin/sh
 cd `dirname $0`
 ROOT_PATH=`pwd`
-CONFIG_FILE = $1
 java -Dtalend.component.manager.m2.repository=$ROOT_PATH/../lib -Xms256M -Xmx1024M -cp .:$ROOT_PATH:$ROOT_PATH/../lib/routines.jar:$ROOT_PATH/../lib/advancedPersistentLookupLib-1.2.jar:$ROOT_PATH/../lib/commons-collections-3.2.2.jar:$ROOT_PATH/../lib/dom4j-1.6.1.jar:$ROOT_PATH/../lib/filecopy.jar:$ROOT_PATH/../lib/jakarta-oro-2.0.8.jar:$ROOT_PATH/../lib/jaxen-1.1.1.jar:$ROOT_PATH/../lib/jboss-serialization.jar:$ROOT_PATH/../lib/log4j-1.2.17.jar:$ROOT_PATH/../lib/postgresql-42.2.5.jar:$ROOT_PATH/../lib/talend_file_enhanced_20070724.jar:$ROOT_PATH/../lib/talendcsv.jar:$ROOT_PATH/../lib/trove.jar:$ROOT_PATH/../lib/xpathutil-1.0.0.jar:$ROOT_PATH/mainjob_0_1.jar:$ROOT_PATH/subset_filebuilder_0_1.jar:$ROOT_PATH/mapper_filemanager_0_2.jar:$ROOT_PATH/subset_filemanager_0_1.jar:$ROOT_PATH/mapper_filebuilder_0_2.jar:$ROOT_PATH/dbgapdictionnaryparser_0_1.jar: dbgap_aws.mainjob_0_1.mainJob  --context=PROD --context_param configFilePath=$1 "$@"
