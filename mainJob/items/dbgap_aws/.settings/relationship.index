@@ -668,6 +668,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "paramsRetriever",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
     "id" : "writeConfigFile4EntityGenerator",
     "version" : "Latest",
     "type" : "routine"
