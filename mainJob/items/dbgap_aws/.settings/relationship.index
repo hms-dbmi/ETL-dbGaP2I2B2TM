@@ -668,6 +668,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "fileWriter",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
     "id" : "paramsRetriever",
     "version" : "Latest",
     "type" : "routine"
