@@ -439,6 +439,10 @@
     "version" : "Latest",
     "type" : "routine"
   }, {
+    "id" : "fileWriter",
+    "version" : "Latest",
+    "type" : "routine"
+  }, {
     "id" : "_G7JzgE8YEem0DtxHb_cOcg - metadata",
     "version" : "Latest",
     "type" : "schema"
