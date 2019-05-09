@@ -25,7 +25,7 @@
     <contextParameter comment="" name="studyName" prompt="studyName?" promptNeeded="false" repositoryContextId="_lZZzwE8aEem0DtxHb_cOcg" type="id_String" value=""/>
   </context>
   <parameters>
-    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="64" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="32" show="false"/>
     <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
@@ -560,7 +560,7 @@
       <column comment="" key="false" length="250" name="participant_set" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties/>
+      <uiProperties shellMaximized="true"/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="dictComplet">
         <mapperTableEntries name="varIdentifier" expression="variables.study_id+&quot;.&quot;+ variables.table_id + &quot;.p&quot; + variables.participant_set  + &quot;.&quot; + variables.variable_id " type="id_String" nullable="true"/>
@@ -573,7 +573,7 @@
         <mapperTableEntries name="variable_id" expression="variables.variable_id " type="id_String" nullable="true"/>
         <mapperTableEntries name="variable_name" expression="NormalizeForETL.cleanString4ETL(variables.variable_name) " type="id_String" nullable="true"/>
         <mapperTableEntries name="variable_description" expression="NormalizeForETL.cleanString4ETL(variables.variable_description) " type="id_String" nullable="true"/>
-        <mapperTableEntries name="variable_type" expression="variables.variable_type " type="id_String" nullable="true"/>
+        <mapperTableEntries name="variable_type" expression="variables.variable_type.toUpperCase() " type="id_String" nullable="true"/>
         <mapperTableEntries name="variable_unit" expression="NormalizeForETL.cleanString4ETL(variables.variable_unit) " type="id_String" nullable="true"/>
         <mapperTableEntries name="StrValue" expression="NormalizeForETL.cleanString4ETL(values.StrValue) " type="id_String" nullable="true"/>
         <mapperTableEntries name="code" expression="values.code " type="id_String" nullable="true"/>
