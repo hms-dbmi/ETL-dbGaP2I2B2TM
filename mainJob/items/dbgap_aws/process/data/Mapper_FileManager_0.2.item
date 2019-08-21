@@ -1068,14 +1068,14 @@
     <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
     <elementParameter field="TABLE" name="INTABLE">
       <elementValue elementRef="key" value="&quot;SUBJECT.csv:0&quot;"/>
-      <elementValue elementRef="Concept_Path" value="&quot;\\TECHNICAL-VARS\\SUBJECT_ID&quot;"/>
+      <elementValue elementRef="Concept_Path" value="context.studyName+&quot;\\TECHNICAL-VARS\\SUBJECT_ID&quot;"/>
       <elementValue elementRef="Supplement_Path" value=""/>
       <elementValue elementRef="Data_Type" value="&quot;TEXT&quot;"/>
       <elementValue elementRef="Options" value=""/>
       <elementValue elementRef="varIdentifier" value=""/>
       <elementValue elementRef="variable_name" value=""/>
       <elementValue elementRef="key" value="&quot;SUBJECT.csv:3&quot;"/>
-      <elementValue elementRef="Concept_Path" value="&quot;\\TECHNICAL-VARS\\CONSENT&quot;"/>
+      <elementValue elementRef="Concept_Path" value="context.studyName+&quot;\\TECHNICAL-VARS\\CONSENT&quot;"/>
       <elementValue elementRef="Supplement_Path" value=""/>
       <elementValue elementRef="Data_Type" value="&quot;TEXT&quot;"/>
       <elementValue elementRef="Options" value=""/>
@@ -1415,7 +1415,7 @@
       <column comment="" key="false" length="5" name="CONSENT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
-      <uiProperties shellMaximized="true"/>
+      <uiProperties/>
       <varTables sizeState="INTERMEDIATE" name="Var" minimized="true"/>
       <outputTables sizeState="INTERMEDIATE" name="CONSENT">
         <mapperTableEntries name="SUBJECT_ID" expression="GENDER.SUBJECT_ID " type="id_String" nullable="true"/>
@@ -1551,15 +1551,15 @@
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate1" show="false"/>
   </connection>
+  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tJava_1">
+    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
+  </connection>
   <connection connectorName="ITERATE" label="Iterate" lineStyle="7" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tSystem_2">
     <elementParameter field="CHECK" name="ENABLE_PARALLEL" value="false"/>
     <elementParameter field="TEXT" name="NUMBER_PARALLEL" value="2" show="false"/>
     <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="iterate3" show="false"/>
-  </connection>
-  <connection connectorName="SUBJOB_OK" label="OnSubjobOk" lineStyle="1" metaname="tFileList_1" offsetLabelX="0" offsetLabelY="0" source="tFileList_1" target="tJava_1">
-    <elementParameter field="CHECK" name="ACTIVATE" value="false" show="false"/>
-    <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk1" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="row2" lineStyle="0" metaname="tDBInput_2" offsetLabelX="0" offsetLabelY="0" source="tDBInput_2" target="tFlowToIterate_2">
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
