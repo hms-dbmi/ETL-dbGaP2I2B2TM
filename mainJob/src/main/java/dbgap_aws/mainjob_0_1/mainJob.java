@@ -211,6 +211,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(ConsentVarIdentifier != null){
+				
+					this.setProperty("ConsentVarIdentifier", ConsentVarIdentifier.toString());
+				
+			}
+			
 			if(consentVarName != null){
 				
 					this.setProperty("consentVarName", consentVarName.toString());
@@ -312,6 +318,10 @@ public Boolean getAddVarName(){
 public String AgeInYearVarIdentifier;
 public String getAgeInYearVarIdentifier(){
 	return this.AgeInYearVarIdentifier;
+}
+public String ConsentVarIdentifier;
+public String getConsentVarIdentifier(){
+	return this.ConsentVarIdentifier;
 }
 public String consentVarName;
 public String getConsentVarName(){
@@ -960,6 +970,11 @@ if( line.startsWith("GenderVarIdentifier")){
 	System.out.println("GenderVarIdentifier ==> " + context.GenderVarIdentifier);
 }
 
+if( line.startsWith("ConsentVarIdentifier")){
+	context.ConsentVarIdentifier = line.split("=")[1].trim();
+	System.out.println("ConsentVarIdentifier ==> " + context.ConsentVarIdentifier);
+}
+
     nb_line_tJavaRow_1++;   
 
  
@@ -1333,6 +1348,8 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_2.add("--context_type " + "addVarName" + "=" + "id_Boolean");
                     parentContextMap_tRunJob_2.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
                     paraList_tRunJob_2.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("ConsentVarIdentifier", context.ConsentVarIdentifier);
+                    paraList_tRunJob_2.add("--context_type " + "ConsentVarIdentifier" + "=" + "id_String");
                     parentContextMap_tRunJob_2.put("consentVarName", context.consentVarName);
                     paraList_tRunJob_2.add("--context_type " + "consentVarName" + "=" + "id_String");
                     parentContextMap_tRunJob_2.put("fileNameSubject", context.fileNameSubject);
@@ -1702,6 +1719,8 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_3.add("--context_type " + "addVarName" + "=" + "id_Boolean");
                     parentContextMap_tRunJob_3.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
                     paraList_tRunJob_3.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("ConsentVarIdentifier", context.ConsentVarIdentifier);
+                    paraList_tRunJob_3.add("--context_type " + "ConsentVarIdentifier" + "=" + "id_String");
                     parentContextMap_tRunJob_3.put("consentVarName", context.consentVarName);
                     paraList_tRunJob_3.add("--context_type " + "consentVarName" + "=" + "id_String");
                     parentContextMap_tRunJob_3.put("fileNameSubject", context.fileNameSubject);
@@ -2290,6 +2309,8 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_1.add("--context_type " + "addVarName" + "=" + "id_Boolean");
                     parentContextMap_tRunJob_1.put("AgeInYearVarIdentifier", context.AgeInYearVarIdentifier);
                     paraList_tRunJob_1.add("--context_type " + "AgeInYearVarIdentifier" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("ConsentVarIdentifier", context.ConsentVarIdentifier);
+                    paraList_tRunJob_1.add("--context_type " + "ConsentVarIdentifier" + "=" + "id_String");
                     parentContextMap_tRunJob_1.put("consentVarName", context.consentVarName);
                     paraList_tRunJob_1.add("--context_type " + "consentVarName" + "=" + "id_String");
                     parentContextMap_tRunJob_1.put("fileNameSubject", context.fileNameSubject);
@@ -2910,6 +2931,8 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                             }
                         context.setContextType("AgeInYearVarIdentifier", "id_String");
                             context.AgeInYearVarIdentifier=(String) context.getProperty("AgeInYearVarIdentifier");
+                        context.setContextType("ConsentVarIdentifier", "id_String");
+                            context.ConsentVarIdentifier=(String) context.getProperty("ConsentVarIdentifier");
                         context.setContextType("consentVarName", "id_String");
                             context.consentVarName=(String) context.getProperty("consentVarName");
                         context.setContextType("fileNameSubject", "id_String");
@@ -2975,6 +2998,8 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                 context.addVarName = (Boolean) parentContextMap.get("addVarName");
             }if (parentContextMap.containsKey("AgeInYearVarIdentifier")) {
                 context.AgeInYearVarIdentifier = (String) parentContextMap.get("AgeInYearVarIdentifier");
+            }if (parentContextMap.containsKey("ConsentVarIdentifier")) {
+                context.ConsentVarIdentifier = (String) parentContextMap.get("ConsentVarIdentifier");
             }if (parentContextMap.containsKey("consentVarName")) {
                 context.consentVarName = (String) parentContextMap.get("consentVarName");
             }if (parentContextMap.containsKey("fileNameSubject")) {
@@ -3218,6 +3243,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     92566 characters generated by Talend Open Studio for Data Integration 
- *     on the 18 juillet 2019 15:03:51 EDT
+ *     94018 characters generated by Talend Open Studio for Data Integration 
+ *     on the 21 août 2019 12:08:39 EDT
  ************************************************************************************************/
