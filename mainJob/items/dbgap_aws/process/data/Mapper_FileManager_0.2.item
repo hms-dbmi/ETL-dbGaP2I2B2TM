@@ -1069,15 +1069,15 @@
     </elementParameter>
     <elementParameter field="RADIO" name="USE_INTABLE" value="true"/>
     <elementParameter field="TABLE" name="INTABLE">
-      <elementValue elementRef="key" value="&quot;SUBJECT.csv:0&quot;"/>
-      <elementValue elementRef="Concept_Path" value="context.studyName+&quot;\\TECHNICAL-VARS\\SUBJECT_ID\\&quot;"/>
+      <elementValue elementRef="key" value="&quot;SUBJECT.csv:4&quot;"/>
+      <elementValue elementRef="Concept_Path" value="&quot;\\TECHNICAL-VARS\\SUBJECT_ID\\&quot;"/>
       <elementValue elementRef="Supplement_Path" value=""/>
       <elementValue elementRef="Data_Type" value="&quot;TEXT&quot;"/>
       <elementValue elementRef="Options" value=""/>
       <elementValue elementRef="varIdentifier" value=""/>
       <elementValue elementRef="variable_name" value=""/>
       <elementValue elementRef="key" value="&quot;SUBJECT.csv:3&quot;"/>
-      <elementValue elementRef="Concept_Path" value="context.studyName+&quot;\\TECHNICAL-VARS\\CONSENT\\&quot;"/>
+      <elementValue elementRef="Concept_Path" value="&quot;\\TECHNICAL-VARS\\CONSENT\\&quot;"/>
       <elementValue elementRef="Supplement_Path" value=""/>
       <elementValue elementRef="Data_Type" value="&quot;TEXT&quot;"/>
       <elementValue elementRef="Options" value=""/>
@@ -1221,6 +1221,7 @@
     <metadata connector="FLOW" label="GENDER" name="GENDER">
       <column comment="" key="false" length="-1" name="SUBJECT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="GENDER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="NA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
@@ -1228,6 +1229,7 @@
       <outputTables sizeState="INTERMEDIATE" name="GENDER">
         <mapperTableEntries name="SUBJECT_ID" expression="row5.SUBJECT_ID " type="id_String" nullable="true"/>
         <mapperTableEntries name="GENDER" expression="row6.GENDER " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NA" expression="row5.NA " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="row5" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="SUBJECT_ID" type="id_String" nullable="true"/>
@@ -1317,6 +1319,7 @@
       <column comment="" key="false" length="-1" name="SUBJECT_ID" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2" name="AGE_IN_YEAR" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="-1" name="GENDER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="NA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
@@ -1325,10 +1328,12 @@
         <mapperTableEntries name="SUBJECT_ID" expression="GENDER.SUBJECT_ID " type="id_String" nullable="true"/>
         <mapperTableEntries name="AGE_IN_YEAR" expression="row7.AGE_IN_YEAR " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="GENDER" expression="GENDER.GENDER " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NA" expression="GENDER.NA " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="GENDER" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="SUBJECT_ID" type="id_String" nullable="true"/>
         <mapperTableEntries name="GENDER" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NA" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row7" activateCondensedTool="true" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="SUBJECT_ID" expression="GENDER.SUBJECT_ID " type="id_String" nullable="true" operator="="/>
@@ -1415,6 +1420,7 @@
       <column comment="" key="false" length="-1" name="GENDER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2" name="AGE_IN_YEAR" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="CONSENT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="NA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
     <nodeData xsi:type="TalendMapper:MapperData">
       <uiProperties/>
@@ -1424,11 +1430,13 @@
         <mapperTableEntries name="GENDER" expression="GENDER.GENDER " type="id_String" nullable="true"/>
         <mapperTableEntries name="AGE_IN_YEAR" expression="SUBJECT.AGE_IN_YEAR " type="id_Integer" nullable="true"/>
         <mapperTableEntries name="CONSENT" expression="row8.CONSENT " type="id_String" nullable="true"/>
+        <mapperTableEntries name="NA" expression="SUBJECT.NA " type="id_String" nullable="true"/>
       </outputTables>
       <inputTables sizeState="INTERMEDIATE" name="SUBJECT" matchingMode="UNIQUE_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="SUBJECT_ID" type="id_String" nullable="true"/>
         <mapperTableEntries name="AGE_IN_YEAR" type="id_Integer" nullable="true"/>
         <mapperTableEntries name="GENDER" type="id_String" nullable="true"/>
+        <mapperTableEntries name="NA" type="id_String" nullable="true"/>
       </inputTables>
       <inputTables sizeState="INTERMEDIATE" name="row8" activateCondensedTool="true" matchingMode="FIRST_MATCH" lookupMode="LOAD_ONCE">
         <mapperTableEntries name="SUBJECT_ID" expression="SUBJECT.SUBJECT_ID " type="id_String" nullable="true" operator="="/>
@@ -1529,6 +1537,7 @@
       <column comment="" key="false" length="-1" name="GENDER" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
       <column comment="" key="false" length="2" name="AGE_IN_YEAR" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_Integer" usefulColumn="true"/>
       <column comment="" key="false" length="5" name="CONSENT" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
+      <column comment="" key="false" length="0" name="NA" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" type="id_String" usefulColumn="true"/>
     </metadata>
   </node>
   <node componentName="tJava" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="160" posY="992">
@@ -1658,6 +1667,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="OnSubjobOk5" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="GENDER" lineStyle="0" metaname="GENDER" offsetLabelX="0" offsetLabelY="0" source="tMap_1" target="tMap_4">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="NA"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="GENDER" show="false"/>
   </connection>
@@ -1666,6 +1680,11 @@
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
   </connection>
   <connection connectorName="FLOW" label="SUBJECT" lineStyle="0" metaname="SUBJECT" offsetLabelX="0" offsetLabelY="0" source="tMap_4" target="tMap_5">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="NA"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
     <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
     <elementParameter field="TEXT" name="UNIQUE_NAME" value="SUBJECT" show="false"/>
   </connection>
@@ -1676,6 +1695,9 @@
   <connection connectorName="FLOW" label="CONSENT" lineStyle="0" metaname="CONSENT" offsetLabelX="0" offsetLabelY="0" source="tMap_5" target="tFileOutputDelimited_1">
     <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
       <elementValue elementRef="TRACE_COLUMN" value="CONSENT"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="NA"/>
       <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
       <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
     </elementParameter>
