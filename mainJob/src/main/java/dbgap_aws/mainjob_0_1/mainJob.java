@@ -253,6 +253,12 @@ protected static void logIgnoredError(String message, Throwable cause) {
 				
 			}
 			
+			if(SubmittedSubjectIdPosition != null){
+				
+					this.setProperty("SubmittedSubjectIdPosition", SubmittedSubjectIdPosition.toString());
+				
+			}
+			
 			if(number_to_keep != null){
 				
 					this.setProperty("number_to_keep", number_to_keep.toString());
@@ -346,6 +352,10 @@ public String getStudyName(){
 public String subjectTableId;
 public String getSubjectTableId(){
 	return this.subjectTableId;
+}
+public Integer SubmittedSubjectIdPosition;
+public Integer getSubmittedSubjectIdPosition(){
+	return this.SubmittedSubjectIdPosition;
 }
 public Integer number_to_keep;
 public Integer getNumber_to_keep(){
@@ -975,6 +985,11 @@ if( line.startsWith("ConsentVarIdentifier")){
 	System.out.println("ConsentVarIdentifier ==> " + context.ConsentVarIdentifier);
 }
 
+if( line.startsWith("SubmittedSubjectIdPosition")){
+	context.SubmittedSubjectIdPosition = Integer.parseInt(line.split("=")[1].trim());
+	System.out.println("SubmittedSubjectIdPosition ==> " + context.SubmittedSubjectIdPosition);
+}
+
     nb_line_tJavaRow_1++;   
 
  
@@ -1362,6 +1377,8 @@ public void tRunJob_2Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_2.add("--context_type " + "studyName" + "=" + "id_String");
                     parentContextMap_tRunJob_2.put("subjectTableId", context.subjectTableId);
                     paraList_tRunJob_2.add("--context_type " + "subjectTableId" + "=" + "id_String");
+                    parentContextMap_tRunJob_2.put("SubmittedSubjectIdPosition", context.SubmittedSubjectIdPosition);
+                    paraList_tRunJob_2.add("--context_type " + "SubmittedSubjectIdPosition" + "=" + "id_Integer");
                     parentContextMap_tRunJob_2.put("number_to_keep", context.number_to_keep);
                     paraList_tRunJob_2.add("--context_type " + "number_to_keep" + "=" + "id_Integer");
                     parentContextMap_tRunJob_2.put("subset", context.subset);
@@ -1733,6 +1750,8 @@ public void tRunJob_3Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_3.add("--context_type " + "studyName" + "=" + "id_String");
                     parentContextMap_tRunJob_3.put("subjectTableId", context.subjectTableId);
                     paraList_tRunJob_3.add("--context_type " + "subjectTableId" + "=" + "id_String");
+                    parentContextMap_tRunJob_3.put("SubmittedSubjectIdPosition", context.SubmittedSubjectIdPosition);
+                    paraList_tRunJob_3.add("--context_type " + "SubmittedSubjectIdPosition" + "=" + "id_Integer");
                     parentContextMap_tRunJob_3.put("number_to_keep", context.number_to_keep);
                     paraList_tRunJob_3.add("--context_type " + "number_to_keep" + "=" + "id_Integer");
                     parentContextMap_tRunJob_3.put("subset", context.subset);
@@ -2323,6 +2342,8 @@ public void tRunJob_1Process(final java.util.Map<String, Object> globalMap) thro
                     paraList_tRunJob_1.add("--context_type " + "studyName" + "=" + "id_String");
                     parentContextMap_tRunJob_1.put("subjectTableId", context.subjectTableId);
                     paraList_tRunJob_1.add("--context_type " + "subjectTableId" + "=" + "id_String");
+                    parentContextMap_tRunJob_1.put("SubmittedSubjectIdPosition", context.SubmittedSubjectIdPosition);
+                    paraList_tRunJob_1.add("--context_type " + "SubmittedSubjectIdPosition" + "=" + "id_Integer");
                     parentContextMap_tRunJob_1.put("number_to_keep", context.number_to_keep);
                     paraList_tRunJob_1.add("--context_type " + "number_to_keep" + "=" + "id_Integer");
                     parentContextMap_tRunJob_1.put("subset", context.subset);
@@ -2945,6 +2966,13 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                             context.studyName=(String) context.getProperty("studyName");
                         context.setContextType("subjectTableId", "id_String");
                             context.subjectTableId=(String) context.getProperty("subjectTableId");
+                        context.setContextType("SubmittedSubjectIdPosition", "id_Integer");
+                            try{
+                                context.SubmittedSubjectIdPosition=routines.system.ParserUtils.parseTo_Integer (context.getProperty("SubmittedSubjectIdPosition"));
+                            } catch(NumberFormatException e){
+                                System.err.println(String.format("Null value will be used for context parameter %s: %s", "SubmittedSubjectIdPosition", e.getMessage()));
+                                context.SubmittedSubjectIdPosition=null;
+                            }
                         context.setContextType("number_to_keep", "id_Integer");
                             try{
                                 context.number_to_keep=routines.system.ParserUtils.parseTo_Integer (context.getProperty("number_to_keep"));
@@ -3012,6 +3040,8 @@ end_Hash.put("tJava_1", System.currentTimeMillis());
                 context.studyName = (String) parentContextMap.get("studyName");
             }if (parentContextMap.containsKey("subjectTableId")) {
                 context.subjectTableId = (String) parentContextMap.get("subjectTableId");
+            }if (parentContextMap.containsKey("SubmittedSubjectIdPosition")) {
+                context.SubmittedSubjectIdPosition = (Integer) parentContextMap.get("SubmittedSubjectIdPosition");
             }if (parentContextMap.containsKey("number_to_keep")) {
                 context.number_to_keep = (Integer) parentContextMap.get("number_to_keep");
             }if (parentContextMap.containsKey("subset")) {
@@ -3243,6 +3273,6 @@ if (execStat) {
     ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
- *     94018 characters generated by Talend Open Studio for Data Integration 
- *     on the 23 août 2019 12:35:09 EDT
+ *     96053 characters generated by Talend Open Studio for Data Integration 
+ *     on the 19 septembre 2019 21:23:32 CEST
  ************************************************************************************************/
